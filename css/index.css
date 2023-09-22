@@ -91,3 +91,106 @@ img{
    max-width: 1200px;
     margin: 0 auto;
 }
+
+
+
+/* COMIENZO DEL HEADER */
+
+header{
+
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-36) var(--spacing-12);
+}
+.navbar{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.navbar_logo{
+    max-width: 300px;
+}
+.navbar .navbar__menu{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+.navbar__link {
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-16);
+    display: inline-block;
+    transition: background .3s ease-in-out;
+    border-radius: 5px;
+    position: relative;
+}
+.navbar__link:hover {
+    background-color: var(--primary-900);    
+}
+
+.with-icon{
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu {
+    display: block;
+}
+.submenu {
+    display: none;
+    width: 200px;
+    position: absolute;
+    background-color: var(--dark-bg-solid);
+    z-index: 3; /* Para que quede encima del banner */
+}
+.submenu__link {
+    display: block;
+    padding: var(--spacing-8) var(--spacing-16);
+    font-size: var(--font-medium);
+    transition: background .3s ease-in-out;
+}
+.submenu__link:hover {
+    background-color: var(--primary-900);  
+}
+
+/*  COMIENZO DEL MAIN */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer {
+    background-color: var(--dark-bg-solid);
+    padding: var(--spacing-68);
+}
+.footer__copy {
+    text-align: center;
+    margin-top: var(--spacing-36);
+}
+
+/* ANIMATIONS */
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% { 
+        opacity: 1;
+    }
+}

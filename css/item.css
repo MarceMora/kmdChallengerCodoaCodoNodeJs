@@ -96,7 +96,7 @@ img{
 
 
 
-/* HEADER */
+/*  COMIENZO DEL HEADER */
 
 header{
 
@@ -158,12 +158,15 @@ header{
     background-color: var(--primary-900);  
 }
 
+/*  COMIENZO DEL MAIN */
 
 
 
 
 
-/* FOOTER */
+
+
+/* COMIENZO DEL FOOTER */
 .footer {
     background-color: var(--dark-bg-solid);
     padding: var(--spacing-68);
