@@ -7,53 +7,128 @@
     <link rel="stylesheet" href="/css/edit.css">
 </head>
 <body>
-    <header>
-        
-        <nav>
-            <picture>
+    <header> <!-- Inicio Header -->
+        <nav class="navbar">
+            <picture class="navbar__logo">
                 <a href="/index.html">
-                    <img src="/img/branding/logo_light_horizontal.svg" alt="logotipo de la marca Funkoshop">
+                    <img src="/img/branding/logo_light_horizontal.svg" alt="Logo lineal del funkoshop">
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="/pages/shop/shop.html">VER TIENDA</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/shop/shop.html">VER TIENDA</a>
+                
                 </li>
-                <li>
-                    <a href="/pages/admin/admin.html">ADMIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/shop/contact.html">ADMIN</a>
                 </li>
-                <li>
-                    <a href="/pages/shop/item.html">SALIR</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/admin/login.html">SALIR</a>
                 </li>
+                
             </ul>
-        </nav>
-    </header> 
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="/pages/shop/shop.html">SHOP</a></li>
-                <li><a href="/pages/admin/register.html">REGISTRARSE</a></li>
-                <li><a href="/pages/admin/login.html">INGRESAR</a></li>
-                <li><a href="/pages/shop/contacto.html">CONTACTO</a></li>
+        </nav>                   
+    </header> <!-- Fin de Header -->
+
+    <main class="container">    <!--COMIENZO DEL MAIN-->
+        <div class="title">
+                <h1>EDITAR ITEM</h1>
+        </div>
+        <section class="categoria">
+        <div class="subcat_cat">
+            <label for="categoria" class="label-1"><p>Categoría:</p></label>
+        <select name="categoria" class="categoria_list">
+            <option value="figuras" class="categoria_option">Figuras</option>
+            <option value="figuras-naruto" class="categoria_option">Naruto</option>
+            <option value="figuras-pokemon" class="categoria_option">Pokemon</option>
+        </select>
+        </div>
+        <div class="subcat_lic">
+            <label for="licencia" class="label-2"><p>Licencia:</p></label>
+        <select name="licencia" class="licencia_list">
+            <option value="licencia-naruto" class="licencia_option">Naruto Shippuden</option>
+            <option value="licencia-pokemon" class="licencia_option">Pokemon</option>
+        </select>
+        </div> 
+        </section>
+
+        <div class="nombre_producto">
+            <label for="nombre-producto" class="label_nombre"><p>Nombre del producto:</p></label> 
+            <input type="text" id="nombre-producto" size="45" class="input_nombre_prod" placeholder="Hataki Shippuden Saga"/>
+        </div>
+    
+        <div class="descripcion">
+            <textarea name="texto" rows="8" cols="70" placeholder="Descripción del producto" class="descripcion_fig">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto Shipudden invocando chidori</textarea>
+        </div>
+    
+    <div class="invent_sub">
+            <section class="invent_seccion">
+        
+            <label for="sku" class="invent_label_sku">Sku:</label>   
+            <input type="text" id="sku" class="invent_input_sku" placeholder="NAR001012"/>
+            </section>
+        <section class="invent_seccion">
+            <label for="precio" class="invent_label_precio">Precio:</label> 
+            <input type="text" id="precio" class="invent_input_precio" placeholder="S1799,00"/>
+        </section>
+        
+    
+        <section class="invent_seccion">
+            <label for="stock" class="invent_label_stock" >Stock:</label> 
+            <input type="text" id="stock" class="invent_input_stock"  placeholder="10"/>
+        
+        </section>
+    </div>
+    
+        <div class="invent_desc">
+        <section class="desc_sect">
+        
+            <label for="descuento" class="invent_label_desc" >Descuento:</label> 
+            <input type="text" id="descuento" class="invent_input" placeholder="10%"/>
+        </section>
+
+        <section class="desc_sect">
+            <label for="cuotas" class="invent_label_desc">Cuotas:</label>
+        
+        <select name="cuotas" class="invent_cuotas1" id="cuotas">
+            <option value="numero-cuotas" class="invent_cuotas_opc1">6 Cuotas sin interés</option>
+            <option value="numero-cuotas" class="invent_cuotas_opc2">12 Cuotas sin interés</option>
+        </select>
+        </section>
+        </div>
+        <div class="imagen">
+            <label for="imagenes" class="imagen_img">Imágenes:</label>
+            <input type="button" value="Elegir archivos" id="imagenes">No se ha seleccionado ningun archivo
+        </div>
+        <div class="imagen_front">
+            <img class="imagen_front_front" src=" " alt="Figura coleccionable funko - Kakashi">
+                 <p>Frente</p>
+        </div>
+                
+        <div class="imagen_back">
+            <img class= "imagen_back_back" src="/" alt="Figura coleccionable funko - Kakashi Box">
+                <p>Dorso</p>
+        </div>
+        <div class="boton">
+            <input class="boton_send" type="button" value="Modificar Producto">
+        </div>
+    
+    </main>
+
+    <footer class="footer">
+        <nav class="navbar">
+            <ul class="navbar__item">
+                <li class="navbar__item"><a class="navbar__link" href="/pages/shop/shop.html">SHOP</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="/pages/admin/register.html">REGISTRARSE</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="/pages/admin/login.html">INGRESAR</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="/pages/shop/contact.html">CONTACTO</a></li>
             </ul>
             <picture>
                 <img src="/img/branding/isotype.svg" alt="Isotipo de Funkoshop">
             </picture>
         </nav>
-            <p>All rights reserved 2023 - Funkoshop &copy;</p>        
+            <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>        
     </footer>  
-    
-
-
-
-
-
-
-
-
-
-
-
     
 </body>
 </html>

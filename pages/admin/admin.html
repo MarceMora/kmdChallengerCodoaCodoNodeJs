@@ -7,32 +7,32 @@
     <link rel="stylesheet" href="/css/admin.css">
 </head>
 <body>
-    <header>
-        
-        <nav>
-            <picture>
+    <header> <!-- Inicio Header -->
+        <nav class="navbar">
+            <picture class="navbar__logo">
                 <a href="/index.html">
-                    <img src="/img/branding/logo_light_horizontal.svg" alt="logotipo de la marca Funkoshop">
+                    <img src="/img/branding/logo_light_horizontal.svg" alt="Logo lineal del funkoshop">
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="/pages/shop/shop.html">VER TIENDA</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/shop/shop.html">VER TIENDA</a>
+                
                 </li>
-                <li>
-                    <a href="/pages/admin/admin.html">ADMIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/shop/contact.html">ADMIN</a>
                 </li>
-                <li>
-                    <a href="/pages/shop/item.html">SALIR</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="/pages/admin/login.html">SALIR</a>
                 </li>
+                
             </ul>
-        </nav>
-    </header> 
-
+        </nav>                   
+    </header> <!-- Fin de Header -->
     <main>
         
         <div>
-            <img src="/img/icons/search_icon.svg" alt="busqueda de productos">
+            <img src=" " alt="busqueda de productos">
             <input type="text" class="form-control pull-right" style="width:20%" id="search" placeholder="Codigo, nombre o categoria">
         </div>
         <h1>Listado de Productos</h1>
@@ -157,20 +157,21 @@
             </tr>
         </table>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="/pages/shop/shop.html">SHOP</a></li>
-                <li><a href="/pages/admin/register.html">REGISTRARSE</a></li>
-                <li><a href="/pages/admin/login.html">INGRESAR</a></li>
-                <li><a href="/pages/shop/contacto.html">CONTACTO</a></li>
+    <footer class="footer">
+        <nav class="navbar">
+            <ul class="navbar__item">
+                <li class="navbar__item"><a class="navbar__link" href="/pages/shop/shop.html">SHOP</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="/pages/admin/register.html">REGISTRARSE</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="/pages/admin/login.html">INGRESAR</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="/pages/shop/contact.html">CONTACTO</a></li>
             </ul>
             <picture>
                 <img src="/img/branding/isotype.svg" alt="Isotipo de Funkoshop">
             </picture>
         </nav>
-            <p>All rights reserved 2023 - Funkoshop &copy;</p>        
-    </footer>     
+            <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>        
+    </footer>  
+
 
 </body>
 </html>
