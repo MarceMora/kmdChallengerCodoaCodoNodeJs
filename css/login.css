@@ -61,7 +61,7 @@
 html{
     font-family: 'Inter', sans-serif;
     font-size: 62.5%;
-    color: #111111;
+    color: var(--dark-solid);
 }
 
 a{ 
@@ -71,7 +71,7 @@ a{
 }
 header, footer{
     font-family: 'Raleway', sans-serif; ;
-    color: white;
+    color: var(--light-font-solid);
 }
 
 ul, ol {
@@ -89,10 +89,10 @@ img{
 
 .container{
    max-width: 1200px;
-    margin: 0 auto;
+   margin: 0 auto;
 }
 
-
+  
 /* HEADER */
 
 header{
@@ -129,12 +129,96 @@ header{
     background-color: var(--primary-900);    
 }
 
+main, form {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 
+.container__title {
+    font-family: var(--alternative-font);
+    font-size: var(--font-jumbo); 
+    text-align: center;
+}
 
+.form__label {
+    font-size: var(--font-large);
+    font-family: var(--base-font);
+    display: inline-block;
+    width: 120px;
+}
 
+.form__label__pw {
+    margin-left: 475px;
+    margin-right: 50px;
+    font-size: var(--font-large);
+    font-family: var(--base-font);
+    
+}
 
+input[type=text] {
+    margin-left: 50px;
+    width: 45%;
+    font-family: var(--base-font);
+    font-size: var(--font-small);
+    text-align: left;
+    border-style: none;
+    border-bottom: 2px solid var(--primary-solid);
+}
+
+input[type=contraseña] {
+    margin-left: -10px;
+      font-size: 60px;
+      font-family: small-cap;
+      width: 13%;
+      border-style: none;
+      border-bottom: 2px solid var(--primary-solid);
+}
+button{
+    margin-right: 30px;
+    background-color: var(--primary-solid);
+    border-style: none;
+    font-family: var(--base-font);
+    font-size: var(--font-xsmall);
+    padding: 15px 30px;
+    color: var(--light-font-solid);
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--dark-solid);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.form__check {
+    font-family: var(--base-font);
+    font-size: var(--font-medium);
+
+}
+
+.form__link {
+    font-family: var(--base-font);
+    font-size: var(--font-xsmall);
+    color: var(--secondary-solid);
+    text-decoration: underline;
+    text-transform: none;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form__button {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* FOOTER */
 .footer {
     background-color: var(--dark-bg-solid);
