@@ -28,6 +28,7 @@
 
 
     /* Tamaño de fuente*/
+    --font-xdisplay: 6em;
     --font-display: 4.6em;
     --font-jumbo: 3.8em;
     --font-xlarge: 3em;
@@ -39,6 +40,7 @@
     /*Espaciado*/
     --spacing-128: 12.8rem;
     --spacing-68: 6.8rem;
+    --spacing-50: 5rem;
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
     --spacing-24: 2.4rem;
@@ -160,7 +162,7 @@ main, form {
 }
 
 input[type=text] {
-    margin-left: 50px;
+    margin-left: var(--spacing-50);
     width: 45%;
     font-family: var(--base-font);
     font-size: var(--font-small);
@@ -171,35 +173,33 @@ input[type=text] {
 
 input[type=contraseña] {
     margin-left: -10px;
-      font-size: 60px;
+      font-size: var(--font-xdisplay);
       font-family: small-cap;
       width: 13%;
       border-style: none;
       border-bottom: 2px solid var(--primary-solid);
 }
 button{
-    margin-right: 30px;
     background-color: var(--primary-solid);
     border-style: none;
     font-family: var(--base-font);
     font-size: var(--font-xsmall);
-    padding: 15px 30px;
+    padding: var(--spacing-16) var(--spacing-28);
     color: var(--light-font-solid);
     cursor: pointer;
 }
 
-input[type=checkbox] {
-    margin-left: 20px;
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--dark-solid);
-    border-radius: 3px;
-    cursor: pointer;
+.form__label__pw {
+    margin-left: 475px;
+    margin-right: 50px;
+    font-size: var(--font-large);
+    font-family: var(--base-font);
+    
 }
 .form__check {
+    padding-left: var(--spacing-8);
     font-family: var(--base-font);
     font-size: var(--font-medium);
-
 }
 
 .form__link {
@@ -209,12 +209,13 @@ input[type=checkbox] {
     text-decoration: underline;
     text-transform: none;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top:  var(--spacing-28);
+    margin-bottom:  var(--spacing-36);
 }
 
 .form__button {
-    margin: 30px;
+    margin-top:  var(--spacing-50);
+    padding-right: var(--spacing-36);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -239,3 +240,12 @@ input[type=checkbox] {
     }
 }
 
+@media all and (max-width:500px) {
+    .container__title{
+        font-size: var(--font-large);
+        margin-top: var(--spacing-36);
+    }
+    main {
+       width: 50%;
+     }
+    }
