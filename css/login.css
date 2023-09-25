@@ -16,7 +16,7 @@
     --dark-900: rgb( 31, 31, 31, 0.9);
     --dark-500: rgb( 31, 31, 31, 0.5);
     --dark-300: rgb( 31, 31, 31, 0.3);
-    --dark-md-solid: #b6b0b0;
+
     --dark-bg-solid: #30343F;
     --light-bg-solid: #FAFAFF;
     --light-font-solid: #FFFFFF;
@@ -28,7 +28,6 @@
 
 
     /* Tamaño de fuente*/
-    --font-xdisplay: 6em;
     --font-display: 4.6em;
     --font-jumbo: 3.8em;
     --font-xlarge: 3em;
@@ -40,7 +39,6 @@
     /*Espaciado*/
     --spacing-128: 12.8rem;
     --spacing-68: 6.8rem;
-    --spacing-50: 5rem;
     --spacing-36: 3.6rem;
     --spacing-28: 2.8rem;
     --spacing-24: 2.4rem;
@@ -112,7 +110,6 @@ header{
 .navbar_logo{
     max-width: 300px;
 }
-
 .navbar .navbar__menu{
 
     display: flex;
@@ -128,10 +125,18 @@ header{
     border-radius: 5px;
     position: relative;
 }
-
 .navbar__link:hover {
     background-color: var(--primary-900);    
 }
+
+main, form {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 
 .container__title {
     font-family: var(--alternative-font);
@@ -140,21 +145,23 @@ header{
 }
 
 .form__label {
-    margin-left: 440px;
-    margin-right: var(--spacing-24);
     font-size: var(--font-large);
-    font-family: var(--base-font);    
+    font-family: var(--base-font);
+    display: inline-block;
+    width: 120px;
 }
 
 .form__label__pw {
-    margin-left: 440px; 
-    margin-right: var(--spacing-12); 
+    margin-left: 475px;
+    margin-right: 50px;
     font-size: var(--font-large);
-    font-family: var(--base-font);   
+    font-family: var(--base-font);
+    
 }
 
 input[type=text] {
-    margin-left: var(--spacing-50);   
+    margin-left: 50px;
+    width: 45%;
     font-family: var(--base-font);
     font-size: var(--font-small);
     text-align: left;
@@ -162,40 +169,37 @@ input[type=text] {
     border-bottom: 2px solid var(--primary-solid);
 }
 
-input[type=contraseña] {  
-      font-size: 80px;
+input[type=contraseña] {
+    margin-left: -10px;
+      font-size: 60px;
       font-family: small-cap;
-      color: var(--dark-md-solid);
-      width: 16%;
+      width: 13%;
       border-style: none;
       border-bottom: 2px solid var(--primary-solid);
 }
-
-input[type=checkbox] {
-    margin-left: var(--spacing-36);
-    width: var(--spacing-20);
-    height: var(--spacing-20);
-    border: 2px solid var(--dark-solid);
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-button[type=submit] {
+button{
+    margin-right: 30px;
     background-color: var(--primary-solid);
     border-style: none;
     font-family: var(--base-font);
     font-size: var(--font-xsmall);
-    padding: var(--spacing-12) var(--spacing-24);
-    margin-left: var(--spacing-50);
+    padding: 15px 30px;
     color: var(--light-font-solid);
     cursor: pointer;
 }
 
-
+input[type=checkbox] {
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--dark-solid);
+    border-radius: 3px;
+    cursor: pointer;
+}
 .form__check {
-    padding-left: var(--spacing-8);
     font-family: var(--base-font);
     font-size: var(--font-medium);
+
 }
 
 .form__link {
@@ -205,13 +209,12 @@ button[type=submit] {
     text-decoration: underline;
     text-transform: none;
     text-align: center;
-    margin-top:  var(--spacing-28);
-    margin-bottom:  var(--spacing-36);
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .form__button {
-    margin-top:  var(--spacing-50);
-    padding-right: var(--spacing-36);
+    margin: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
