@@ -218,7 +218,7 @@ div.list-products{
 }
 
 /*TABLA*/
-img#size-img{
+img.size-img{
     width: 24.37px;
     height: 25.09px;
     top: 3.78px;
@@ -273,7 +273,7 @@ td.board__category{
     top: 344.78px;
     left: 833px;
 }
-#gral{
+.gral{
     font-family: var(--base-font);
     font-weight: 500;
     font-size: 24px;
