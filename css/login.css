@@ -16,7 +16,7 @@
     --dark-900: rgb( 31, 31, 31, 0.9);
     --dark-500: rgb( 31, 31, 31, 0.5);
     --dark-300: rgb( 31, 31, 31, 0.3);
-
+    --dark-md-solid: #b6b0b0;
     --dark-bg-solid: #30343F;
     --light-bg-solid: #FAFAFF;
     --light-font-solid: #FFFFFF;
@@ -112,6 +112,7 @@ header{
 .navbar_logo{
     max-width: 300px;
 }
+
 .navbar .navbar__menu{
 
     display: flex;
@@ -127,18 +128,10 @@ header{
     border-radius: 5px;
     position: relative;
 }
+
 .navbar__link:hover {
     background-color: var(--primary-900);    
 }
-
-main, form {  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-
 
 .container__title {
     font-family: var(--alternative-font);
@@ -147,23 +140,21 @@ main, form {
 }
 
 .form__label {
+    margin-left: 440px;
+    margin-right: var(--spacing-24);
     font-size: var(--font-large);
-    font-family: var(--base-font);
-    display: inline-block;
-    width: 120px;
+    font-family: var(--base-font);    
 }
 
 .form__label__pw {
-    margin-left: 475px;
-    margin-right: 50px;
+    margin-left: 440px; 
+    margin-right: var(--spacing-12); 
     font-size: var(--font-large);
-    font-family: var(--base-font);
-    
+    font-family: var(--base-font);   
 }
 
 input[type=text] {
-    margin-left: var(--spacing-50);
-    width: 45%;
+    margin-left: var(--spacing-50);   
     font-family: var(--base-font);
     font-size: var(--font-small);
     text-align: left;
@@ -171,31 +162,36 @@ input[type=text] {
     border-bottom: 2px solid var(--primary-solid);
 }
 
-input[type=contraseña] {
-    margin-left: -10px;
-      font-size: var(--font-xdisplay);
+input[type=contraseña] {  
+      font-size: 80px;
       font-family: small-cap;
-      width: 13%;
+      color: var(--dark-md-solid);
+      width: 16%;
       border-style: none;
       border-bottom: 2px solid var(--primary-solid);
 }
-button{
+
+input[type=checkbox] {
+    margin-left: var(--spacing-36);
+    width: var(--spacing-20);
+    height: var(--spacing-20);
+    border: 2px solid var(--dark-solid);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type=submit] {
     background-color: var(--primary-solid);
     border-style: none;
     font-family: var(--base-font);
     font-size: var(--font-xsmall);
-    padding: var(--spacing-16) var(--spacing-28);
+    padding: var(--spacing-12) var(--spacing-24);
+    margin-left: var(--spacing-50);
     color: var(--light-font-solid);
     cursor: pointer;
 }
 
-.form__label__pw {
-    margin-left: 475px;
-    margin-right: 50px;
-    font-size: var(--font-large);
-    font-family: var(--base-font);
-    
-}
+
 .form__check {
     padding-left: var(--spacing-8);
     font-family: var(--base-font);
@@ -240,12 +236,3 @@ button{
     }
 }
 
-@media all and (max-width:500px) {
-    .container__title{
-        font-size: var(--font-large);
-        margin-top: var(--spacing-36);
-    }
-    main {
-       width: 50%;
-     }
-    }

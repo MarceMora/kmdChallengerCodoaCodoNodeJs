@@ -32,7 +32,7 @@
     
 
     <main>
-        <section>
+        <section class="container">
             <div> 
                 <h2 class="container__title">INGRESAR A MI CUENTA</h2>
             </div> 
@@ -43,10 +43,10 @@
                 <label class="form__label" for="email">Email:</label> 
                 <input type="text" id="email"  placeholder="johnDoe@correo.com"  maxlength="50"> 
             </div>
-                <br><br>
+                
             <div> 
                 <label class="form__label__pw" for="contraseña">Contraseña:</label> 
-                <input type="contraseña" id="contraseña"  value="........." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="30"> 
+                <input type="contraseña" id="contraseña" placeholder="Password" value="........." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" maxlength="30"> 
             </div>
             <div class="form__button">
                 <button type="submit" value="Ingresar">Ingresar</button>
