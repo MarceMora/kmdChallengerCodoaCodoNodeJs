@@ -639,44 +639,9 @@ td.category__hp4{
     height: 61px;
     top: 1128.23;
     left: 833px;
+
+    
 }
-/*footer*/
-.footer {
-    background-color: var(--dark-bg-solid);
-    padding: var(--spacing-68);
-}
-
- .footer__copy{
-        text-align: center;
-        font-size: var(--font-medium);
-        margin-top: var(--spacing-36);
-    }
- ul.navbar__item-create{
-        font-size: var(--font-small);
-    }
-
-/* ANIMATIONS */
-@keyframes fade {
-    0% {
-        opacity: 0;
-    }
-    100% { 
-        opacity: 1;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* FOOTER */
 .footer {
     background-color: var(--dark-bg-solid);
@@ -696,4 +661,19 @@ td.category__hp4{
         opacity: 1;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
