@@ -168,6 +168,10 @@ h1.list-title{
     line-height: 49.31px;
     letter-spacing: 4%;
 }
+p.list-products__width{
+    padding-right: 5px;
+    width: var(--spacing-8);
+    }
 
   div  .list__add{
     width: 39px;
@@ -192,7 +196,7 @@ img .list__add{
 
 div.list__add-b{
     border: none;
-    margin-right: var(--spacing-68);
+    margin-right: 165px;
 }
 
 div.list-products{
@@ -202,7 +206,7 @@ div.list-products{
 }
 
  div .list-products__add p{
-    flex: 1;
+    width: 10px;
     align-items: center;
     font-family: var(--base-font);
     font-size: 24px;
@@ -210,7 +214,7 @@ div.list-products{
     line-height: 29.05px;
     letter-spacing: 4%;
     color: rgba(31, 31, 31, 1);
-    margin-right: var(--spacing-8);
+    margin-right: 120px;
 }
 
 /*TABLA*/
@@ -219,6 +223,7 @@ img.size-img{
     height: 25.09px;
     top: 3.78px;
     left: 4px;
+    margin-right: var(--spacing-8);
 }
 
 td.boar__id{
@@ -305,7 +310,7 @@ td.category__sw{
     width: 153px;
     height: 61px;
     top: 396.73px;
-    left: 833px;
+    padding-right: 150px;
 }
 
 /* linea 2*/
