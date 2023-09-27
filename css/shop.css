@@ -96,12 +96,13 @@ img{
 /*  COMIENZO DEL HEADER */
 
 header{
-
+    
     background-color: var(--dark-bg-solid);
     padding: var(--spacing-36) var(--spacing-12);
 }
 .navbar{
-
+    margin-left: var(--spacing-68) ;
+    margin-right: var(--spacing-68);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -161,8 +162,8 @@ header{
     display: grid;
     grid-template-columns: 1fr 3fr;
     column-gap: var(--spacing-16);
-    margin-top: var(--spacing-68);
-    margin-bottom: var(--spacing-68);
+    margin: var(--spacing-68);
+    
 }
 .shop__filter {
     display: flex;
