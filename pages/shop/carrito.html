@@ -47,12 +47,12 @@
         </nav>                   
     </header> <!-- Fin de Header -->
 
-    <main>
-        <div>
-        <h2><u>CARRITO DE COMPRAS</u> </h2>
-        </div>
-        <article>
-            <table border-colapse width="75%" heigth="50%" >
+    <main class="container">
+        <div class="container__title">
+          <h2 class="container__title__h2">CARRITO DE COMPRAS</h2>
+        </div> 
+        <article class="container__article">
+            <table>
                 <tr>
                     <td>DETALLE DEL PRODUCTO</td>
                     <td >CANTIDAD</td>
@@ -60,42 +60,93 @@
                 </tr>
 	        </table>	
         </article>
-        <section>
-            <article>
-                <picture>
-                    <img src="/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grapa de la serie de Mandalorian">
-                </picture>
-                <h3>BABY YODA BLUEBALL</h3>
-                <p>STAR WARS</p>
-                <p>precio: $ 1799,99 </p>
-                <div>
-                    <input type="number" name="seleccionar"  placeholder="2" value="2" min="0"><p>$ 3599,98</p>
-                
-                </div>
+        <section class="container">
+            <article class="container__item">
+                <picture class="container__producto">
+                    <img class="container__img" src="/img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Grapa de la serie de Mandalorian">
+                  <div class="container__box">
+                    <h3>BABY YODA BLUEBALL</h3>
+                    <p class="container__text">STAR WARS</p>
+                    <p class="container__text">precio: $ 1799,99 </p>
+                  </div>
+              
+                <div class="container__input">
+                        <input type="number" id="seleccionar" name="seleccionar"  placeholder="2" value="2" min="0" max="5">
+                        <div class="input__button">
+                          <button class="input__mas">
+                            <img class="icon" src="/img/icons/plus-box.svg" alt="Más">
+                          </button>
+                         <button class="input__menos">
+                           <img class="icon" src="/img/icons/minus-fill.svg" alt="Menos">
+                         </button>
+                        </div>         
+                   <div>
+                    <p class="input__total">$ 3599,98</p>
+                   </div>   
+                   <button class="input__cancelar">
+                    <img src="/img/icons/xbox-x.svg" alt="cancelar">
+                   </button>   
+            </picture>    
             </article>
-            <article>
-                <picture>
-                    <img src="/img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable de la serie Pokemon">
-                </picture>
-                <h3>PIDGEOTO</h3>
-                <p>POKEMON</p>
-                <p>precio: $ 1799,99 </p>
-                <div>
-                    <input type="number" name="seleccionar"  placeholder="1" value="1" min="0"><p>$ 1799,98</p>
+
+            <article class="container__item">
+                <picture class="container__producto">
+                    <img class="container__img" src="/img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable de la serie Pokemon">
+                 <div class="container__box">
+                    <h3>PIDGEOTO</h3>
+                    <p class="container__text">POKEMON</p>
+                    <p class="container__text">precio: $ 1799,99 </p>
+                 </div>
+
+               <div class="container__pokemon">
+                <input  type="number" id="seleccionar" placeholder="1" value="1" min="0" max="5">           
+                <div class="input__button">
+                    <button class="input__mas">
+                        <img src="/img/icons/plus-box.svg" alt="Más">
+                    </button>
+                   <button class="input__menos">
+                       <img src="/img/icons/minus-fill.svg" alt="Menos">
+                   </button>
                 </div>
+               </div>
+               <div>
+                <p class="input__total">$ 1799,98</p>
+               </div>
+               <button class="input__cancelar">
+                  <img src="/img/icons/xbox-x.svg" alt="Cancelar">
+               </button>
+            </picture>
             </article>
         </section>
-            <div>
-                <h2><u>RESUMEN</u></h2>
-                <p>CANTIDAD DE ELEMENTOS</p><p>3</p>
-                <p>SUBTOTAL</p><p>$ 5399,97</p>
-                <p>ENVIO</p><p>0,00</p>
-                <p>______________________</p>
-                <p>TOTAL</p><p>$ 5399,97</p>
-                <a href="/pages/shop/carrito.html">IR A PAGAR</a>
 
+        <section class="container">
+           <div class="container__resumen">
+                <h2 class="resumen__title">RESUMEN</h2>
+           </div>
+            <div class="resumen__container">
+                <div class="resumen__item">
+                    <p class="resumen__text">CANTIDAD DE ELEMENTOS</p>
+                    <p class="resumen__valor">3</p>
+                </div>
+                <div class="resumen__item">
+                    <p class="resumen__text">SUBTOTAL</p>
+                    <p class="resumen__valor">$5399.97</p>
+                </div>
+                <div class="resumen__item">
+                    <p class="resumen__text">ENVÍO</p>
+                    <p class="resumen__valor">$0.00</p>
+                </div>
+                <div class="resumen__item">
+                    <p class="resumen__item__total">TOTAL</p>
+                    <p class="resumen__valor" id="total">$5399.97</p>
+                </div>     
             </div>
+                <div class="container container__button">
+                    <button class="button__pagar">IR A PAGAR</button>
+                </div>
+        </section>
     </main>
+
     <footer class="footer">
         <nav class="navbar">
             <ul class="navbar__item">
