@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/register.css">
 </head>
 <body>
-    <header> <!-- Inicio Header -->
+    <header class="container"> <!-- Inicio Header -->
         <nav class="navbar">
             <picture class="navbar__logo">
                 <a href="/index.html">
@@ -29,60 +29,61 @@
             </ul>
         </nav>                   
     </header> <!-- Fin de Header -->
-    <main>    
-        <div class="signupFrm">
-            <div class="wrapper">
-            <form action="" class="form">
-              <h1 class="title">CREA TU CUENTA</h1>
-                <p>Completa el Formulario para ser parte del mundo de los Funkos</p>
+    <main class="container">
+    <div class="signupFrm">
+        <div class="wrapper ">
+        <form action="post" class="form ">
+          <h1 class="title">CREA TU CUENTA</h1>
+            <p>Completa el formulario para ser parte del mundo de los Funkos</p>
+
+           
+             <div class="inputContainer">
+         <label for="nombre" class="label">
+                <span>Nombre:</span>
+        </label>
+            <input type="text" class="input" placeholder="Jhon">
+            </div>
     
-               
-                 <div class="inputContainer">
-             <label for="nombre" class="label">
-                    <span>Nombre:</span>
+          <div class="inputContainer">
+            <label for="apellido" class="label">
+                <span>Apellido:</span>
             </label>
-                <input type="text" class="input" placeholder="Jhon">
-                </div>
-        
-              <div class="inputContainer">
-                <label for="apellido" class="label">
-                    <span>Apellido:</span>
-                </label>
-                <input type="text" class="input" placeholder="Doe">
-               
-            </div>
-        
-            <div class="inputContainer">
-                <label for="email" class="label">
-                    <span>Email:</span>
-                </label>
-                <input type="email" class="input" placeholder="JhonDoe@correo.com">
-                
-            </div>
-            <div class="inputContainer">
-                <label for="contraseña" class="label">
-                    <span>Contraseña:</span>
-                </label>
-                <input type="text" class="input" placeholder="*********">
-            </div>
-        
-              <div class="inputContainer">
-                <label for="confirma conraseña" class="label">
-                    <span>Confirmar contraseña:</span>
-                </label>
-                <input type="text" class="input" placeholder="*********">
-            </div>
-            <div class="inputCheck"> 
-                <input type="checkbox" class="check" id="acepto">Acepto<a  class="termCond" href=""> Terminos y Condiciones</a>
-            </div>
-            <div class="inputBtn">
-                <input type="submit" class="submitBtn" value="Registrar">
-            </div>
-            </form>
-            </div>
-          </div>
-        </main>
-<footer class="footer">
+            <input type="text" class="input" placeholder="Doe">
+           
+        </div>
+    
+        <div class="inputContainer">
+            <label for="email" class="label">
+                <span>Email:</span>
+            </label>
+            <input type="email" class="input" placeholder="JhonDoe@correo.com">
+            
+        </div>
+        <div class="inputContainer">
+            <label for="contraseña" class="label">
+                <span>Contraseña:</span>
+            </label>
+            <input type="contraseña" id="contraseña" class="input" placeholder="contraseña" value=".........">
+        </div>
+    
+        <div class="inputContainer">
+            <label for="confirma contraseña" class="label">
+                <span>Repita Contraseña:</span>
+            </label>
+            <input type="contraseña" class="input" placeholder="repetir contraseña" value=".........">
+        </div>
+        <div class="inputBtn">
+            <input type="submit" class="submitBtn" value="Registrar">
+       
+        <div class="inputCheck"> 
+            <input type="checkbox" class="check" id="acepto">Acepto<a  class="termCond" href=""> Terminos y Condiciones</a>
+        </div>
+        </div>
+        </form>
+        </div>
+      </div>
+      </main>
+    <footer class="footer container">
     <nav class="navbar">
         <ul class="navbar__item">
             <li class="navbar__item"><a class="navbar__link" href="/pages/shop/shop.html">SHOP</a></li>

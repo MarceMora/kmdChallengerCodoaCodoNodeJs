@@ -29,32 +29,31 @@
             </ul>
         </nav>                   
     </header> <!-- Fin de Header -->
-
     <main class="container">    <!--COMIENZO DEL MAIN-->
         <div class="title">
                 <h1>EDITAR ITEM</h1>
         </div>
         <section class="categoria">
-        <div class="subcat_cat">
-            <label for="categoria" class="label-1"><p>Categoría:</p></label>
-        <select name="categoria" class="categoria_list">
-            <option value="figuras" class="categoria_option">Figuras</option>
-            <option value="figuras-naruto" class="categoria_option">Naruto</option>
-            <option value="figuras-pokemon" class="categoria_option">Pokemon</option>
-        </select>
-        </div>
-        <div class="subcat_lic">
-            <label for="licencia" class="label-2"><p>Licencia:</p></label>
-        <select name="licencia" class="licencia_list">
-            <option value="licencia-naruto" class="licencia_option">Naruto Shippuden</option>
-            <option value="licencia-pokemon" class="licencia_option">Pokemon</option>
-        </select>
-        </div> 
-        </section>
+            <div class="subcat_cat">
+                <label for="categoria" class="label-1"><p>Categoría:</p></label>
+            <select name="categoria" class="categoria_list">
+                <option value="figuras" class="categoria_option">Figuras</option>
+                <option value="figuras-naruto" class="categoria_option">Naruto</option>
+                <option value="figuras-pokemon" class="categoria_option">Pokemon</option>
+            </select>
+            </div>
+            <div class="subcat_cat">
+                <label for="licencia" class="label-2"><p>Licencia:</p></label>
+            <select name="licencia" class="licencia_list">
+                <option value="licencia-naruto" class="licencia_option">Naruto Shippuden</option>
+                <option value="licencia-pokemon" class="licencia_option">Pokemon</option>
+            </select>
+            </div> 
+            </section>
 
         <div class="nombre_producto">
             <label for="nombre-producto" class="label_nombre"><p>Nombre del producto:</p></label> 
-            <input type="text" id="nombre-producto" size="45" class="input_nombre_prod" placeholder="Hataki Shippuden Saga"/>
+            <input type="text" id="nombre-producto" size="24" class="input_nombre_prod" placeholder="Kakashi Hatake Shippuden Saga"/>
         </div>
     
         <div class="descripcion">
@@ -64,12 +63,12 @@
     <div class="invent_sub">
             <section class="invent_seccion">
         
-            <label for="sku" class="invent_label_sku">Sku:</label>   
+            <label for="sku" class="invent_label_sku">SKU:</label>   
             <input type="text" id="sku" class="invent_input_sku" placeholder="NAR001012"/>
             </section>
         <section class="invent_seccion">
             <label for="precio" class="invent_label_precio">Precio:</label> 
-            <input type="text" id="precio" class="invent_input_precio" placeholder="S1799,00"/>
+            <input type="text" id="precio" class="invent_input_precio" placeholder="$ 1.799,00"/>
         </section>
         
     
@@ -87,10 +86,10 @@
             <input type="text" id="descuento" class="invent_input" placeholder="10%"/>
         </section>
 
-        <section class="desc_sect">
-            <label for="cuotas" class="invent_label_desc">Cuotas:</label>
+        <section class="desc_sect_cuotas">
+            <label for="cuotas" class="invent_label_cuotas">Cuotas:</label>
         
-        <select name="cuotas" class="invent_cuotas1" id="cuotas">
+        <select name="cuotas" class="invent_cuotas" id="cuotas">
             <option value="numero-cuotas" class="invent_cuotas_opc1">6 Cuotas sin interés</option>
             <option value="numero-cuotas" class="invent_cuotas_opc2">12 Cuotas sin interés</option>
         </select>
@@ -98,23 +97,25 @@
         </div>
         <div class="imagen">
             <label for="imagenes" class="imagen_img">Imágenes:</label>
-            <input type="button" value="Elegir archivos" id="imagenes">No se ha seleccionado ningun archivo
+            <input type="button" class="imagen_img_btn" value="Elegir archivos" id="imagenes"><b>No se ha seleccionado ningun archivo.</b>
         </div>
-        <div class="imagen_front">
-            <img class="imagen_front_front" src=" " alt="Figura coleccionable funko - Kakashi">
-                 <p>Frente</p>
+
+        <section class="figuras">
+        <div class="figura_front">
+            <img class="figura_front_front" src="/img/naruto/kakashi_hatake_front.webp" alt="Figura coleccionable funko - Kakashi">
+                 <p> Frente</p>
+                 
         </div>
                 
-        <div class="imagen_back">
-            <img class= "imagen_back_back" src="/" alt="Figura coleccionable funko - Kakashi Box">
+        <div class="figura_back">
+            <img class= "figura_back_back" src="/img/naruto/kakashi_hatake_back.webp" alt="Figura coleccionable funko - Kakashi Box">
                 <p>Dorso</p>
         </div>
+        </section>
         <div class="boton">
             <input class="boton_send" type="button" value="Modificar Producto">
         </div>
-    
-    </main>
-
+     </main>
     <footer class="footer">
         <nav class="navbar">
             <ul class="navbar__item">
