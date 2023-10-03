@@ -104,17 +104,14 @@ header{
     padding: var(--spacing-36) var(--spacing-12);
 }
 .navbar{
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 .navbar_logo{
     max-width: 300px;
 }
 .navbar .navbar__menu{
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -169,6 +166,7 @@ header{
     grid-template-columns: repeat( 2, 1fr);
     align-items: center;
     padding: var(--spacing-16) 0;
+    gap:var(--spacing-128);
 }
 
 
@@ -189,10 +187,6 @@ header{
     size: 24px;
     line-height: 29.05px;
 }
-
-
-
-
 
 .item__quantity{
     border: none;
