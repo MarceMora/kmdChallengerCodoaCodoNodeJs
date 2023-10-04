@@ -189,7 +189,7 @@ header{
     z-index: 1;
   }
   input[type=contraseña]{
-    font-size: 40px;
+    font-size: var(--font-medium);
     
     
   }
@@ -279,7 +279,8 @@ header{
 }
 .footer__copy {
   text-align: center;
-  margin-top: var(--spacing-36);
+  margin-top: var(--spacing-68);
+  
 }
 
 /* ANIMATIONS */
