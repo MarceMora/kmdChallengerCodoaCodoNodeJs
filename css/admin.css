@@ -671,6 +671,12 @@ td.category__hp4{
     text-align: center;
     margin-top: var(--spacing-36);
 }
+.navbar__item-foot{
+    margin-left: -50px;
+}
+.isotype__foot{
+   margin-right: var(--spacing-68);
+}
 
 /* ANIMATIONS */
 @keyframes fade {
