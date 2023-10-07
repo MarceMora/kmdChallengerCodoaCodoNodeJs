@@ -8,7 +8,7 @@
 </head>
 <body>
     <header> <!-- Inicio Header -->
-        <nav class="navbar">
+        <nav class="navbar container">
             <picture class="navbar__logo">
                 <a href="/index.html">
                     <img src="/img/branding/logo_light_horizontal.svg" alt="Logo lineal del funkoshop">
@@ -31,9 +31,9 @@
     </header> <!-- Fin de Header -->
 
 
-    <main> <!--Main-->
+    <main class="container"> <!--Main-->
         <h1 class="title__create">CREAR NUEVO ITEM</h1>
-        <form action="">
+        <form action="post">
             <div class="select__form">
                 <div class="category__licence">
                     <label class="selection" for="category">Categoría:</label>
@@ -75,7 +75,7 @@
                     rows="10"></textarea>
 
 
-                <div class="container">
+                <div class="">
                     <label class="characteristics" for="name">SKU:</label>
                     <input class="characteristics__sku" type="text" name="" id="" placeholder="SSK111AB001">
 
@@ -108,7 +108,7 @@
                 </div>
 
                 <label class="file_img" for="name">Imágenes:</label>
-                <input class="file_select" type="file" name="">
+                <input class="file__select" type="file"  name="">
 
                 <div class="button__create">
                     <button class="collection-cart-1" type="submint">Agregar Producto</button>
@@ -122,7 +122,7 @@
 
 
     <footer class="footer"> <!--Footer-->
-        <nav class="navbar container">
+        <nav class="navbar">
             <ul class="navbar__item">
                 <li class="navbar__item"><a class="navbar__link" href="/pages/shop/shop.html">SHOP</a></li>
                 <li class="navbar__item"><a class="navbar__link" href="/pages/admin/register.html">REGISTRARSE</a></li>

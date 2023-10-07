@@ -100,8 +100,7 @@ header{
     padding: var(--spacing-36) var(--spacing-12);
 }
 .navbar{
-    margin-left: var(--spacing-68);
-    margin-right: var(--spacing-68);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -111,11 +110,11 @@ header{
     max-width: 300px;
 }
 .navbar .navbar__menu{
-
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: var(--spacing-20);
+    gap:var(--spacing-36);
+    margin-right: 80px;
 }
 .navbar__link {
     font-size: var(--font-medium);
@@ -148,13 +147,19 @@ img.search__svg{
 }
 
 input#search.form-control.pull-right{
-    
     width: 529.76px;
     height: 40.28px;
     top: 180px;
     left: 171.12px;
     border-radius: 6px;
     border: 2px solid rgba(48, 52, 63, 1);
+    font-family: var(--base-font);
+    font-size: var(--font-small);
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:rgba(185, 185, 185, 1);
 }
 
 div.container__list{
@@ -224,7 +229,6 @@ img.size-img{
     height: 25.09px;
     top: 3.78px;
     left: 4px;
-    margin-right: var(--spacing-8);
 }
 
 td.boar__id{
@@ -237,6 +241,7 @@ td.boar__id{
     height: 29px;
     top: 344.78px;
     left: 138.23px;
+    padding-left: var(--spacing-28);
 }
 
 td.board__code{
@@ -290,6 +295,7 @@ td.id__one{
     top: 396.73px;
     left: 144.73px;
     align-items: center;
+    padding-left: var(--spacing-28);
 }
 
 td.code__type{
@@ -321,6 +327,7 @@ td.id__two{
     height: 61px;
     top: 457.69px;
     left: 143.73px;
+    padding-left: var(--spacing-28);
 }
 td.code__type-bf{
     width: 158px;
@@ -350,6 +357,7 @@ td.id__three{
     top: 518.65px;
     left: 143.23px;
     align-items: center;
+    padding-left: var(--spacing-28);
 }
 td.code__ls{
     width: 159px;
@@ -376,7 +384,8 @@ td.id__four{
     height: 61px;
     top: 579.61px;
     left: 143.23px;
-    align-items: center;  
+    align-items: center; 
+    padding-left: var(--spacing-28); 
 }
 td.code__sl{
     width: 152px;
@@ -403,7 +412,8 @@ td.id__five{
     height: 61px;
     top: 640.57px;
     left: 143.73px;
-    align-items: center;  
+    align-items: center;
+    padding-left: var(--spacing-28); 
 }
 td.code__cs{
     width: 146px;
@@ -430,7 +440,8 @@ td.id__six{
     height: 61px;
     top: 701.53px;
     left: 143.23px;
-    align-items: center;  
+    align-items: center; 
+    padding-left: var(--spacing-28);
 }
 td.code__dh{
     width: 149px;
@@ -457,7 +468,8 @@ td.id__seven{
     height: 61px;
     top: 762.48px;
     left: 144.23px;
-    align-items: center;  
+    align-items: center; 
+    padding-left: var(--spacing-28);
 }
 td.code__pf{
     width: 150px;
@@ -484,7 +496,8 @@ td.id__eight{
     height: 61px;
     top: 823.44px;
     left: 143.23px;
-    align-items: center;  
+    align-items: center;
+    padding-left: var(--spacing-28);  
 }
 td.code__pks{
     width: 150px;
@@ -511,7 +524,8 @@ td.id__nine{
     height: 61px;
     top: 884.4px;
     left: 143.23px;
-    align-items: center;  
+    align-items: center;
+    padding-left: var(--spacing-28); 
 }
 td.code__vf{
     width: 149px;
@@ -538,7 +552,8 @@ td.id__ten{
     height: 61px;
     top: 945.36px;
     left: 137.23px;
-    align-items: center;  
+    align-items: center;
+    padding-left: var(--spacing-28);  
 }
 td.code__hhp{
     width: 142px;
@@ -565,7 +580,8 @@ td.id__eleven{
     height: 61px;
     top: 1006.32px;
     left: 139.23px;
-    align-items: center;  
+    align-items: center; 
+    padding-left: var(--spacing-28); 
 }
 td.code__hbd{
     width: 152px;
@@ -592,7 +608,8 @@ td.id__twelve{
     height: 61px;
     top: 1067.27px;
     left: 137.23px;
-    align-items: center;   
+    align-items: center;
+    padding-left: var(--spacing-28);   
 }
 td.code__llm{
     width: 153px;
@@ -620,7 +637,8 @@ td.id__thirteen{
     height: 61px;
     top: 1128.23px;
     left: 137.23px;
-    align-items: center;   
+    align-items: center; 
+    padding-left: var(--spacing-28);  
 }
 td.code__snp{
     width: 146px;
@@ -651,6 +669,12 @@ td.category__hp4{
 .footer__copy {
     text-align: center;
     margin-top: var(--spacing-36);
+}
+.navbar__item-foot{
+    margin-left: -50px;
+}
+.isotype__foot{
+   margin-right: var(--spacing-68);
 }
 
 /* ANIMATIONS */

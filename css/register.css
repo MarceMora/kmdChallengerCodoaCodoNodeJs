@@ -59,7 +59,6 @@
 }
 
 html{
-  background: black;    /* color a todo el contenedor */
   font-size: 62.5%; 
   color: var(--dark-solid);
   font-family: var(--base-font);    
@@ -85,7 +84,6 @@ p{
 img {
   width: 100%;
 }
-
 .container {
 
   max-width: 1200px;
@@ -104,8 +102,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 50px;
-  margin-right: 50px;
+  
 
 }
 .navbar_logo{
@@ -134,8 +131,7 @@ header{
 /* MAIN - FORMULARIO */
 
 .signupFrm {
-  
-    background-color: black;   /* color negro al contenedor del formulario */
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,23 +140,25 @@ header{
   
   
   .form {
-    height: 80vh;
+    
+    height: 526.06px;
     background-color: white;
     width: 1200px;
-    padding: 10px 10px;
-    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    padding: 40px 10px;
+    /* box-shadow: 0 10px 25px rgba(92, 99, 105, .2);  para darle una sombra al contenedor del formulario */ 
   }
   
   .title {
-    font-size: var(--font-jumbo);          /* original 50px*/
+    font-size: var(--font-jumbo);         
     margin-bottom: 40px;
     text-align: center;
-    border-top: 30px;
+    margin-top: 5px;
   
     
   }
-  p{
+  .parrafo{
     font-size: var(--font-xlarge);
+    font-weight: 500;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -182,7 +180,7 @@ header{
     width: 38%;
     border: 0;
     border-bottom: 3px solid var(--primary-solid);
-    font-size: 16px;
+    font-size: var(--font-small);
     padding: 0 20px;
     outline: none;
     background: none;
@@ -190,6 +188,7 @@ header{
   }
   input[type=contraseña]{
     font-size: var(--font-medium);
+    color: #c0c4bf;
     
     
   }
@@ -202,7 +201,8 @@ header{
     padding: 0 4px;
     background-color: white;             /*white*/
     color:black;
-    font-size: var(--font-small);
+    font-size: var(--font-medium);
+    font-weight: 600;
     transition: 0.5s;
     z-index: 0;
   }
@@ -272,14 +272,14 @@ header{
 
 /* FOOTER */
 .footer {
+  
   background-color: var(--dark-bg-solid);
-  padding: var(--spacing-68);
-  margin-left: 130px;
-  margin-right: 130px;
+  padding: var(--spacing-68)
+  
 }
 .footer__copy {
   text-align: center;
-  margin-top: var(--spacing-68);
+  margin-top: var(--spacing-36);
   
 }
 
