@@ -100,8 +100,6 @@ header{
     padding: var(--spacing-36) var(--spacing-12);
 }
 .navbar{
-    margin-left: 250px;
-    margin-right: 300px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -138,12 +136,9 @@ h1.title__create{
     margin-left: 260px;
     margin-top: var(--spacing-36);
 }
-form{
-    margin-left: 250px;
-}
+
 div.select__form{
-    width: 827.63px;
-    left: 115.55px;
+    width: 1000px;
     height: 669.3px;
     top: 180px;
 }
@@ -440,7 +435,6 @@ footer{
     }
     .footer__copy{
         text-align: center;
-        font-size: var(--font-medium);
         margin-top: var(--spacing-36);
     }
     /* ANIMATIONS */
