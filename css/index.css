@@ -287,11 +287,8 @@ iconify-icon{
 .glide__arrow--right{
     right: 0;
 }
-/*SE ELIMINA LA CLASE SLIDER__ITEMS PARA QUE FUNCIONE LA LIBRERIA
-.slider__items{
-    display: flex;
-    gap: var(--spacing-24);
-}*/
+/*SE ELIMINA LA CLASE SLIDER__ITEMS PARA QUE FUNCIONE LA LIBRERIA*/
+
 
 
 
