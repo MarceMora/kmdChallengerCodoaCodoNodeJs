@@ -243,11 +243,23 @@ p a.item__promo-a{
     font-weight: 700px;
     line-height: 54px;
 }
+/* se agrega la clase iconify-icon para darle estilos a las flechas*/
+iconify-icon{
+    color: var(--dark-bg-solid);
+    font-size: var(--font-small);
+    font-weight: 700;
 
-.slider__items{
-    display: flex;
-    gap: var(--spacing-24);
 }
+.glide__arrow--left{
+    left: 0;
+
+}
+.glide__arrow--right{
+    right: 0;
+}
+/*SE ELIMINA LA CLASE SLIDER__ITEMS PARA QUE FUNCIONE LA LIBRERIA*/
+
+
 
 .card-item__cover{
     display: flex;
