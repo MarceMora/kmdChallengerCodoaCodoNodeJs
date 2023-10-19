@@ -71,13 +71,13 @@
                   </div>
               
                 <div class="container__input">
-                        <input type="number" id="seleccionar" name="seleccionar"  placeholder="2" value="2" min="0" max="5">
+                        <input type="number" id="quantity" name="seleccionar"  placeholder="2" value="2" min="0" max="5">
                         <div class="input__button">
-                          <button class="input__mas">
-                            <img class="icon" src="/img/icons/plus-box.svg" alt="Más">
+                          <button id="add"  class="input__mas">
+                            <img class="icon" src="/img/icons/plus-box.svg" alt="+">
                           </button>
-                         <button class="input__menos">
-                           <img class="icon" src="/img/icons/minus-fill.svg" alt="Menos">
+                         <button id="subtract" class="input__menos">
+                           <img class="icon" src="/img/icons/minus-fill.svg" alt="-">
                          </button>
                         </div>         
                    <div>
@@ -98,18 +98,19 @@
                     <p class="container__text">POKEMON</p>
                     <p class="container__text">precio: $ 1799,99 </p>
                  </div>
-
+                
                <div class="container__pokemon">
-                <input  type="number" id="" placeholder="1" value="1" min="0" max="5">           
+                <input id="quantity2" type="number"  placeholder="1" value="1" min="0" max="5">           
                 <div class="input__button">
-                    <button class="input__mas">
-                        <img src="/img/icons/plus-box.svg" alt="Más">
+                    <button id="add2"  class="input__mas">
+                        <img src="/img/icons/plus-box.svg" alt="+">
                     </button>
-                   <button class="input__menos">
-                       <img src="/img/icons/minus-fill.svg" alt="Menos">
+                   <button id="subtract2" class="input__menos">
+                       <img src="/img/icons/minus-fill.svg" alt="-">
                    </button>
                 </div>
                </div>
+               
                <div>
                 <p class="input__total">$ 1799,99</p>
                </div>
@@ -163,6 +164,7 @@
             <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>        
     </footer>  
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
-
+    <script src="/javascript/carrito.js"></script>
+    <script src="/javascript/carrito2.js"></script>
 </body>
 </html>
