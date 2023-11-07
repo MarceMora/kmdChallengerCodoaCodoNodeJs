@@ -4,7 +4,9 @@
   "description": "<br>\r <p align=\"center\">\r <img src=\"https://github.com/testTPU/1/blob/main/nodejs.png\"  alt=\"logo Node Js\">\r </p>\r <br>\r <p align=\"center\">\r                    Trabajo Integrador de Node Js Codo a codo 2023!\r                    Grupo N° 6 | Comisión #23578",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Grupo 06 (Karina Oliver; Debora jara y Marcelo Mora",
