@@ -1,11 +1,12 @@
 const express = require ("express");
 const router = express.Router();
+const adminControllers = require("../controllers/adminControllers");
 
-router.get("/",(_req, res) => res.send("Ruta para la Vista de Administrador"));
-router.get("/create",(_req,res) => res.send("Ruta para la vista Crear Producto"));
-router.post("/create",(_req, res) => res.send("Ruta para la vista Cargar Producto"));
-router.get("/edit/:id",(_req,res) => res.send("Ruta para la Vista encontrar y Editar Producto por su Id "));
-router.put("/edit/:id",(_req,res) => res.send("Ruta para la Vista encontrar, editar y modificar producto por su Id"));
-router.delete("/delete/:id",(_req,res) => res.send("Ruta para la Vista encontrar producto por su Id y borrarlo o eliminarlo"));
+router.get("/", adminControllers.admin);
+router.get("/create", adminControllers.create);
+router.post("/create", adminControllers.create);
+router.get("/edit/:id", adminControllers.edit,id);
+router.put("/edit/:id", adminControllers.edit,id);
+router.delete("/delete/:id", adminControllers.delete,id);
 
 module.exports = router;
