@@ -7,27 +7,10 @@
     <link rel="stylesheet" href="../../css/admin.css">
 </head>
 <body>
-    <header> <!-- Inicio Header -->
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../../index.html">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="logotipo de la marca Funkoshop">
-                </a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/shop/shop.html">VER TIENDA</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/admin.html">ADMIN</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/shop/item.html">SALIR</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class=" container"> <!-- INICIO MAIN-->
+    
+    <%- include("..partials/headerAdmin") -%>
+    
+    <main class=" container">           <!-- INICIO MAIN-->
 
         <div class="search-list">
             <img class="search__svg" src="../../img/icons/search_icon.svg" alt="busqueda de productos">
@@ -46,11 +29,7 @@
 
             <div class="list__add-b "> <button class="list__bu"><img class="list__add "  src="../../img/icons/plus-box.svg"></button>
             </div>
-
         </div>
-
-
-
         <table  cellpadding="15" cellspacing="0">
             <tr class="board">
                 <td class="boar__id"><strong>ID</strong></td>
@@ -58,9 +37,7 @@
                 <td class="board__name"><strong>Nombre del Producto</strong></td>
                 <td class="board__category"><strong>Categoria</strong></td>
             </tr>
-
-
-            <tr class="gral">
+             <tr class="gral">
                 <td class="id__one">1</td>
                 <td class="code__type">STW001001</td>
                 <td class="name__by">Baby Yoda Blueball</td>
@@ -68,8 +45,6 @@
                 <td><img class="size-img" src="../../img/icons/edit_pencil.svg"></td>
                 <td><img class="size-img" src="../../img/icons/delete_trash.svg"></td>
             </tr>
-
-
             <tr class="gral" >
                 <td class="id__two">2</td>
                 <td class="code__type-bf">STW001002</td>
@@ -78,7 +53,6 @@
                 <td ><img class="size-img" src="../../img/icons/edit_pencil.svg"></td>
                 <td><img class="size-img" src= "../../img/icons/delete_trash.svg "></td>
             </tr>
-
             <tr class="gral">
                 <td class="id__three">3</td>
                 <td class="code__ls">STW001003</td>
@@ -170,20 +144,8 @@
             </tr>
         </table>
         </main>
-        <footer class="footer">
-            <nav class="navbar container">
-                <ul class="navbar__item-foot">
-                    <li class="navbar__item"><a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="../../pages/admin/register.html">REGISTRARSE</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="../../pages/admin/login.html">INGRESAR</a></li>
-                    <li class="navbar__item"><a class="navbar__link" href="../../pages/shop/contacto.html">CONTACTO</a></li>
-                </ul>
-                <picture>
-                    <img class="isotype__foot" src="../../img/branding/isotype.svg" alt="Isotipo de Funkoshop">
-                </picture>
-            </nav>
-                <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>        
-        </footer>  
+        <%- include("../partials/footerAdmin") -%>
+        
 
 </body>
 </html>

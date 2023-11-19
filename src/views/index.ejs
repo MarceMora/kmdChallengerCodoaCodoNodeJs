@@ -9,43 +9,9 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header> <!-- Inicio Header -->
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="index.html">
-                    <img src="./img/branding/logo_light_horizontal.svg" alt="Logo lineal del funkoshop">
-                </a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item with-submenu">
-                <a class="navbar__link with-icon" href="./pages/shop/shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
-                <ul class="submenu">
-                <li class="submenu__item">
-                    <a href="" class="submenu__link">Funkos</a>
-                </li>
-                <li class="submenu__item">
-                    <a href="" class="submenu__link">Remeras</a>
-                </li>
-                <li class="submenu__item">
-                    <a href="" class="submenu__link">Llaveros</a>
-                </li>
-            </ul>   
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="./pages/shop/contacto.html">CONTACTO</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__cart" href="./pages/shop/shop.html">
-                    <img src="./img/icons/cart-icon.svg" alt="Icono de carrito">
-                    </a>
-                </li>
-            </ul>
-        </nav>                   
-    </header> <!-- Fin de Header -->
-                  
+    
+    <%- include("../partials/headerShop") -%>     
+                 
         <section class="hero">
             <article class="hero__content container">
                 <h3 class="hero__title">Nuevos ingresos</h3>
@@ -166,20 +132,9 @@
             </section>
 
         </main>       
-    <footer class="footer">
-        <nav class="navbar">
-            <ul class="navbar__item">
-                <li class="navbar__item"><a class="navbar__link" href="./pages/shop/shop.html">SHOP</a></li>
-                
-                <li class="navbar__item"><a class="navbar__link" href="./pages/admin/login.html">INGRESAR</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="./pages/shop/contacto.html">CONTACTO</a></li>
-            </ul>
-            <picture>
-                <img src="./img/branding/isotype.svg" alt="Isotipo de Funkoshop">
-            </picture>
-        </nav>
-            <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>        
-    </footer>  
+        
+        <%- include("../partials/footerShop") -%>
+
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide "></script>

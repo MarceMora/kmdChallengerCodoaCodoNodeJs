@@ -9,47 +9,10 @@
     <link rel="stylesheet" href="../../css/item.css">
 </head>
 <body>
-    <header> <!-- Inicio Header -->
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../../index.html">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo lineal del funkoshop">
-                </a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item with-submenu">
-                <a class="navbar__link with-icon" href="../../pages/shop/shop.html">SHOP<iconify-icon icon="mdi:chevron-down"></iconify-icon></a>
-                <ul class="submenu">
-                <li class="submenu__item">
-                    <a href="" class="submenu__link">Funkos</a>
-                </li>
-                <li class="submenu__item">
-                    <a href="" class="submenu__link">Remeras</a>
-                </li>
-                <li class="submenu__item">
-                    <a href="" class="submenu__link">Llaveros</a>
-                </li>
-            </ul>   
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/shop/contacto.html">CONTACTO</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/login.html">LOGIN</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__cart" href="../../pages/shop/shop.html">
-                    <img src="../../img/icons/cart-icon.svg" alt="Icono de carrito">
-                    </a>
-                </li>
-            </ul>
-        </nav>                   
-    </header> <!-- Fin de Header -->
+   
+    <%- include("../partials/headerShop") -%>
 
-
-
-
-    <main class=" main-container"><!--comienzo main-->
+     <main class=" main-container"><!--comienzo main-->
         <section class="collection container">
 
             <picture class="collection__cover">
@@ -71,10 +34,6 @@
                 </article>
 
         </section>
-
-
-
-
         <section class="slider container glide ">
             <h2 class="slider__title">PRODUCTOS RELACIONADOS</h2>
             <div class="glide__track" data-glide-el="track">
@@ -152,25 +111,10 @@
             <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><iconify-icon icon="mdi:chevron-left"></iconify-icon></button>
             <button  class="glide__arrow glide__arrow--right" data-glide-dir=">"><iconify-icon icon="mdi:chevron-right"></iconify-icon></button>
         </div>
-
-
         </section>
-    </main><!--finalizo main-->
+    </main>                      <!--finalizo main-->
 
-    <footer class="footer">
-        <nav class="navbar">
-            <ul class="navbar__item">
-                <li class="navbar__item"><a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a></li>
-               
-                <li class="navbar__item"><a class="navbar__link" href="../../pages/admin/login.html">INGRESAR</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="../../pages/shop/contacto.html">CONTACTO</a></li>
-            </ul>
-            <picture>
-                <img src="../../img/branding/isotype.svg" alt="Isotipo de Funkoshop">
-            </picture>
-        </nav>
-            <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>        
-    </footer>  
+    <%- include("../partials/footerShop") -%>
     
     <script src="../../javascript/item.js"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>

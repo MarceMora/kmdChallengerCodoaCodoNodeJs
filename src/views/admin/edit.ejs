@@ -7,28 +7,9 @@
     <link rel="stylesheet" href="../../css/edit.css">
 </head>
 <body>
-    <header> <!-- Inicio Header -->
-        <nav class="navbar container">
-            <picture class="navbar__logo">
-                <a href="../../index.html">
-                    <img src="../../img/branding/logo_light_horizontal.svg" alt="Logo lineal del funkoshop">
-                </a>
-            </picture>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/shop/shop.html">VER TIENDA</a>
-                
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/admin.html">ADMIN</a>
-                </li>
-                <li class="navbar__item">
-                    <a class="navbar__link" href="../../pages/admin/login.html">SALIR</a>
-                </li>
-                
-            </ul>
-        </nav>                   
-    </header> <!-- Fin de Header -->
+    
+    <%- include("..partials/headerAdmin") -%>
+
     <main class="container">    <!--COMIENZO DEL MAIN-->
         <div class="title">
                 <h1>EDITAR ITEM</h1>
@@ -118,20 +99,8 @@ Shipudden invocando chidori</textarea>
             <input class="boton_send" type="button" value="Modificar Producto">
         </div>
      </main>
-    <footer class="footer">
-        <nav class="navbar">
-            <ul class="navbar__item">
-                <li class="navbar__item"><a class="navbar__link" href="../../pages/shop/shop.html">SHOP</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="../../pages/admin/register.html">REGISTRARSE</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="../../pages/admin/login.html">INGRESAR</a></li>
-                <li class="navbar__item"><a class="navbar__link" href="../../pages/shop/contacto.html">CONTACTO</a></li>
-            </ul>
-            <picture>
-                <img src="../../img/branding/isotype.svg" alt="Isotipo de Funkoshop">
-            </picture>
-        </nav>
-            <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>        
-    </footer>  
     
+     <%- include("../partials/footerAdmin") -%>
+     
 </body>
 </html>
