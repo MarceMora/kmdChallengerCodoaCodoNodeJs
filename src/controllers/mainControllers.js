@@ -1,6 +1,11 @@
+const path = require("path");
+
 const mainControllers = {
-    home:(req, res)=> res.send ("Ruta para la vista del Home"),
-    contacto:(req, res)=> res.send ("Ruta para la Vista de Contacto"),
+    home:(req, res)=> {
+        res.render(path.resolve(__dirname, "../views/main/index.ejs"));
+    
+    },
+
     about:(req, res)=> res.send ("Ruta para la Vista de Acerca de"),
     faqs: (req, res)=> res.send ("Ruta para la Vista de Preguntas Frecuentes")
 }

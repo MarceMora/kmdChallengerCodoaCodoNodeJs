@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
+const path = require('path');
 
 const mainRoutes = require("./src/routes/mainRoutes");
 const shopRoutes = require("./src/routes/shopRoutes");
@@ -10,7 +11,12 @@ const authRoutes = require("./src/routes/authRoutes");
 app.use(express.static ("public"));
 
 app.set('view engine', 'ejs');
-app.set('views', './src/views');
+app.set('views', [
+    path.join(__dirname + '/views/admin'), 
+    path.join('./views/shop'),
+    path.join('./views')
+])
+//app.set('views', './src/views'); 
 
 app.use(express.urlencoded({extended:true,}));
 app.use(express.json());

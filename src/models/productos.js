@@ -43,5 +43,4 @@ const productosFalsos = [
     },
 
 ]
-
-export default productosFalsos
+module.exports = productosFalsos
