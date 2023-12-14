@@ -19,7 +19,7 @@ const shopControllers = {
 
     itemGet: (req, res)=> {
         const itemId = req.params.id;
-        const item = datos.find(item => item.product_Id == itemId);
+        const item = datos.find(item => item.product_id == itemId);
 
         res.render (path.resolve(__dirname, "../views/shop/item.ejs"),{
             title: "FUNKOSHOP - ITEM",
