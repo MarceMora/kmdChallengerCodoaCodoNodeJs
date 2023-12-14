@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FUNKOSHOP - SHOP</title>
-    <link rel="stylesheet" href="../../css/shop.css">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/shop.css">
 </head>
 <body>
     <header>    
@@ -52,162 +52,35 @@
 
         <section class="shop__content">
             <ul class="shop__items">
-                <li class="shop__item">
-                    <article class="card-item">
-                        <a class="card-item__link" href="">
-                            <picture class="card-item__cover">
-                                <span class="card-item__tag">NUEVO</span>
-                                <img class="card-item__img--front" src="../../img/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de Stormtrooper de la serie de Mandalorian ">
-                                <img class="card-item__img--back" src="../../img/star-wars/trooper-box.webp" alt="Figura coleccionable Funko de Stormtrooper de la serie The Mandalorian en caja ">
-                            </picture>
-                            <div class="card-item__content">
-                                <p class="card-item__licence">STAR WARS</p>
-                                <h4 class="card-item__name">STORMTROOPER LIGTHSABER</h4>
-                                <p class="card-item__price">$1799,99</p>
-                                <p class="card-item__promo">3 cuotas sin interes</p>
-                            </div>
-                        </a>   
-                    </article>
-                </li>
-                <li class="shop__item">
-                    <article class="card-item">
-                        <a class="card-item__link" href="">
-                            <picture class="card-item__cover">
-                                <span class="card-item__tag">NUEVO</span>
-                                <img class="card-item__img--front" src="../../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon Indigo">
-                                <img class="card-item__img--back" src="../../img/pokemon/pidgeotto-box.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon Indigo en caja">
-                            </picture>
-                            <div class="card-item__content">
-                                <p class="card-item__licence">POKEMON</p>
-                                <h4 class="card-item__name">PIDGEOTTO</h4>
-                                <p class="card-item__price">$1799,99</p>
-                                <p class="card-item__promo">3 cuotas sin interes</p>
-                            </div>
-                        </a>   
-                    </article>
-                </li>                
-                <li class="shop__item">
-                    <article class="card-item">
-                        <a class="card-item__link" href="">
-                            <picture class="card-item__cover">
-                                <span class="card-item__tag">NUEVO</span>
-                                <img class="card-item__img--front" src="../../img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Lovegood Lion Mask de la pelicula Harry Potter">
-                                <img class="card-item__img--back" src="../../img/harry-potter/luna-box.webp" alt="Figura coleccionable Funko de Luna Loveggod Lion Mask de la pelicula Harry Potter en caja">
-                            </picture>
-                            <div class="card-item__content">
-                                <p class="card-item__licence">HARRY POTTER</p>
-                                <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
-                                <p class="card-item__price">$1799,99</p>
-                                <p class="card-item__promo">3 cuotas sin interes</p>
-                            </div>
-                        </a>  
-                </article></li>
-                <li class="shop__item">
-                    <article class="card-item">
-                        <a class="card-item__link" href="">
-                            <picture class="card-item__cover">
-                                <span class="card-item__tag">NUEVO</span>
-                                <img class="card-item__img--front" src="../../img/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de Stormtrooper Ligtsaber de la serie The Mandalorian">
-                                <img class="card-item__img--back" src="../../img/star-wars/trooper-box.webp" alt="Figura coleccionable Funko de Stormtrooper Ligtsaber de la serie The Mandalorian  en caja">
-                            </picture>
-                            <div class="card-item__content">
-                                <p class="card-item__licence">STAR WARS</p>
-                                <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-                                <p class="card-item__price">$1799,99</p>
-                                <p class="card-item__promo">3 cuotas sin interes</p>
-                            </div>
-                        </a>  
-                </article></li>
+
+                <% datos.forEach(item=> { %>
+
                 
                 <li class="shop__item">
                     <article class="card-item">
                         <a class="card-item__link" href="">
                             <picture class="card-item__cover">
                                 <span class="card-item__tag">NUEVO</span>
-                                <img class="card-item__img--front" src="../../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon Indigo">
-                                <img class="card-item__img--back" src="../../img/pokemon/pidgeotto-box.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie Pokemon Indigo en caja">
+                                <img class="card-item__img--front" src= "<%= item.img_front %>" alt="">
+                                <img class="card-item__img--back" src="<%= item.img_back %>" alt="">
                             </picture>
                             <div class="card-item__content">
-                                <p class="card-item__licence">POKEMON</p>
-                                <h4 class="card-item__name">PIDGEOTTO</h4>
-                                <p class="card-item__price">$1799,99</p>
-                                <p class="card-item__promo">3 cuotas sin interes</p>
+                                <p class="card-item__licence"><%= item.licence_name %></p>
+                                <h4 class="card-item__name"><%= item.product_name %></h4>
+                                <p class="card-item__price">$ <%= item.product_price %></p>
+                                <p class="card-item__promo"><%= item.product_dues %> cuotas sin interes</p>
                             </div>
                         </a>   
                     </article>
                 </li>
-                <li class="shop__item">
-                    <article class="card-item">
-                        <a class="card-item__link" href="">
-                            <picture class="card-item__cover">
-                                <span class="card-item__tag">NUEVO</span>
-                                <img class="card-item__img--front" src="../../img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Loveggod Lion Mask de la pelicula Harry Potter">
-                                <img class="card-item__img--back" src="../../img/harry-potter/luna-box.webp" alt="Figura coleccionable Funko de Luna Loveggod Lion Mask de la pelicula Harry Potter en caja">
-                            </picture>
-                            <div class="card-item__content">
-                                <p class="card-item__licence">HARRY POTTER</p>
-                                <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
-                                <p class="card-item__price">$1799,99</p>
-                                <p class="card-item__promo">3 cuotas sin interes</p>
-                            </div>
-                        </a>  
-                    </article></li>
-                    <li class="shop__item">
-                        <article class="card-item">
-                            <a class="card-item__link" href="">
-                                <picture class="card-item__cover">
-                                    <span class="card-item__tag">NUEVO</span>
-                                    <img class="card-item__img--front" src="../../img/star-wars/trooper-1.webp" alt="Figura coleccionable Funko de Stormtrooper de la serie The Mandalorian">
-                                    <img class="card-item__img--back" src="../../img/star-wars/trooper-box.webp" alt="Figura coleccionable Funko de Stormtrooper la serie The Mandalorian en caja">
-                                </picture>
-                                <div class="card-item__content">
-                                    <p class="card-item__licence">STAR WARS</p>
-                                    <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
-                                    <p class="card-item__price">$1799,99</p>
-                                    <p class="card-item__promo">3 cuotas sin interes</p>
-                                </div>
-                            </a>  
-                    </article></li>
-                    <li class="shop__item">
-                        <article class="card-item">
-                            <a class="card-item__link" href="">
-                                <picture class="card-item__cover">
-                                    <span class="card-item__tag">NUEVO</span>
-                                    <img class="card-item__img--front" src="../../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie de Pokemon Indigo">
-                                    <img class="card-item__img--back" src="../../img/pokemon/pidgeotto-box.webp" alt="Figura coleccionable Funko de Pidgeotto de la serie de Pokemon Indigo en caja">
-                                </picture>
-                                <div class="card-item__content">
-                                    <p class="card-item__licence">POKEMON</p>
-                                    <h4 class="card-item__name">PIDGEOTTO</h4>
-                                    <p class="card-item__price">$1799,99</p>
-                                    <p class="card-item__promo">3 cuotas sin interes</p>
-                                </div>
-                            </a>   
-                        </article>
-                    </li>
-                    <li class="shop__item">
-                        <article class="card-item">
-                            <a class="card-item__link" href="">
-                                <picture class="card-item__cover">
-                                    <span class="card-item__tag">NUEVO</span>
-                                    <img class="card-item__img--front" src="../../img/harry-potter/luna-1.webp" alt="Figura coleccionable Funko de Luna Loveggod Lion Mask de la pelicula Harry Potter">
-                                    <img class="card-item__img--back" src="../../img/harry-potter/luna-box.webp" alt="Figura coleccionable Funko de Luna Loveggod Lion Mask de la pelicula Harry Potter">
-                                </picture>
-                                <div class="card-item__content">
-                                    <p class="card-item__licence">HARRY POTTER</p>
-                                    <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
-                                    <p class="card-item__price">$1799,99</p>
-                                    <p class="card-item__promo">3 cuotas sin interes</p>
-                                </div>
-                            </a>   
-                        </article>
-                    </li>
+                <% }) %>
+
             </ul>
             <div class="center">
                 <div class="pagination">
-                    <a href="../../pages/shop/shop.html">❮</a>
-                    <a href="../../pages/shop/shop.html">1</a>
-                    <a href="../../pages/shop/shop.html" class="active">2</a>
+                    <a href="/shop">❮</a>
+                    <a href="/shop">1</a>
+                    <a href="/shop" class="active">2</a>
                     <a href="#">...</a>
                     <a href="#">9</a>
                     <a href="#">10</a>
@@ -216,8 +89,8 @@
               </div>
         </section>     
     </main>
-    <footer>
-    <%- include("../partials/footerShop") -%>
+    <footer class="footer">
+    <%- include("../partials/footerShop") %>
     
     </footer>
 

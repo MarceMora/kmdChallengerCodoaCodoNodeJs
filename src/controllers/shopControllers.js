@@ -1,17 +1,30 @@
 const path = require("path"); 
+const datos = require("../models/productos");
 
 const shopControllers = {
     shop: (req, res)=> {
-        res.render (path.resolve(__dirname, "../views/shop/shop.ejs"));
+
+        res.render (path.resolve(__dirname, "../views/shop/shop.ejs"),{
+            title: "FUNKOSHOP - SHOP",
+            datos: datos
+        });
 
     },
 
     contacto: (req, res)=> {
-        res.render (path.resolve(__dirname, "../views/shop/contacto.ejs"));
+        res.render (path.resolve(__dirname, "../views/shop/contacto.ejs"),{
+            title: "FUNKOSHOP - CONTACTO",
+        });
     },
 
     itemGet: (req, res)=> {
-        res.render (path.resolve(__dirname, "../views/shop/item.ejs"));
+        const itemId = req.params.id;
+        const item = datos.find(item => item.product_Id == itemId);
+
+        res.render (path.resolve(__dirname, "../views/shop/item.ejs"),{
+            title: "FUNKOSHOP - ITEM",
+            item
+        });
     },
 
 
@@ -19,7 +32,9 @@ const shopControllers = {
 
     carritoView: (req, res)=>{
 
-        res.render (path.resolve(__dirname, "../views/shop/carrito.ejs"));
+        res.render (path.resolve(__dirname, "../views/shop/carrito.ejs"),{
+            title: "FUNKOSHOP - CARRITO",
+        });
     },
 
     carritoCheck: (req, res)=> res.send ("Ruta para ir a Chequear Carrito de Compras")

@@ -376,7 +376,8 @@ input[type=checkbox] {
     border: 1px solid var(--primary-solid);
   }
   
-  .pagination a:hover:not(.active) {background-color: #ddd;}
+  .pagination a:hover:not(.active) {background-color: #ddd;
+}
 
 
 /* COMIENZO DEL FOOTER */
