@@ -1,9 +1,15 @@
 const path = require("path");
+const {getAll} = require("../models/productosModel");
+
 
 const adminControllers = {
-    admin: (req, res)=> {
+    admin: async (req, res)=> {
+
+        const data = await getAll();
+
     res.render (path.resolve(__dirname,"../views/admin/admin.ejs"),{
         title: "FUNKOSHOP - ADMIN",
+        data
     });
     },
     createItem: (req, res)=> {
