@@ -23,13 +23,13 @@
             <div class="list-products">
                 <h1 class="list-title">LISTADO DE PRODUCTOS</h1>
             </div>
-
             <div class="list-products__add">
-                <p>AGREGAR</p>
+            <p>AGREGAR</p>
             </div>
-
-            <div class="list__add-b "> <button class="list__bu"><img class="list__add "  src="/img/icons/plus-box.svg"></button>
+            <div class="list__add-b ">
+                <a href="/admin/add"><img class="list__add " src="/img/icons/plus-box.svg"></a>
             </div>
+            
         </div>
         <table  cellpadding="15" cellspacing="0">
             <tr class="board">
@@ -46,8 +46,13 @@
                 <td class="code__type"><%= item.sku %></td>
                 <td class="name__by"><%= item.product_name %></td>
                 <td class="category__sw"><%= item.licence_name %></td>
-                <td><img class="size-img" src="/img/icons/edit_pencil.svg"></td>
-                <td><img class="size-img" src="/img/icons/delete_trash.svg"></td>
+                
+                <td><a href="/admin/edit/<%= item.product_id %>">
+                    <img class="size-img" src="/img/icons/edit_pencil.svg"></a></td>
+                
+                <td><a href="/admin/delete/<%= item.product_id %>">
+                    <img class="size-img" src="/img/icons/delete_trash.svg"></a></td>
+                    
             </tr>
             <% }); %>
             

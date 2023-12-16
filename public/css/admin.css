@@ -187,7 +187,6 @@ p.list-products__width{
     color: #FFFFFF;
     flex: 1;
     align-items: center;
-    margin-top: 15px;
     border: none;
 }
 img .list__add{
@@ -201,6 +200,7 @@ img .list__add{
    margin-bottom: 15px;}
 
 div.list__add-b{
+    
     border: none;
     margin-right: 165px;
 }
