@@ -3,7 +3,7 @@ const {getAll,getOne} = require("../models/productosModel");
 
 
 const adminControllers = {
-    admin: async (req, res)=> {
+    adminView: async (req, res)=> {
 
         const datos = await getAll();
 
@@ -12,18 +12,18 @@ const adminControllers = {
         datos
     });
     },
-    createItem: (req, res)=> {
+    createItemView: (req, res)=> {
         res.render (path.resolve(__dirname,"../views/admin/create.ejs"),{
             title: "FUNKOSHOP - CREATE",
         });
     },
-    createCarry: (req, res)=> res.send ("Ruta para la vista Cargar Producto"),
+    createItem: (req, res)=> res.send ("Ruta para la vista Cargar Producto"),
 
-    editItem: async (req, res)=> {
+    editItemView: async (req, res)=> {
 
-        const { id }  = req.params;
+        const  {id} = req.params;
 
-        const [product] = await getOne( id )
+        const [product] = await getOne(id)
 
         res.render (path.resolve(__dirname,"../views/admin/edit.ejs"),{
             title: "FUNKOSHOP - EDIT",
@@ -31,7 +31,7 @@ const adminControllers = {
         });
     },
 
-    editModify: (req, res)=> res.send ("Ruta para la Vista encontrar, editar y modificar producto por su Id"),
+    editItem: (req, res)=> res.send ("Ruta para la Vista encontrar, editar y modificar producto por su Id"),
     deleteItem: (req, res)=> res.send ("Ruta para la Vista encontrar producto por su Id y borrarlo o eliminarlo")
 
 }
