@@ -37,29 +37,28 @@
 
         <div class="nombre_producto">
             <label for="nombre-producto" class="label_nombre"><p>Nombre del producto:</p></label> 
-            <input type="text" id="nombre-producto" size="24" class="input_nombre_prod" placeholder="Kakashi Hatake Shippuden Saga"/>
+            <input type="text" id="nombre-producto" size="24" class="input_nombre_prod" value= "<%= product.product_name %>">
         </div>
     
         <div class="descripcion">
-            <textarea name="texto" rows="8" cols="70" placeholder="Descripción del producto" class="descripcion_fig">Figura Funko coleccionable de Kakashi Hatake de la saga Naruto 
-Shipudden invocando chidori</textarea>
+            <textarea name="texto" rows="8" cols="70" class="descripcion_fig" required><%= product.product_description %></textarea>
         </div>
     
     <div class="invent_sub">
             <section class="invent_seccion">
         
             <label for="sku" class="invent_label_sku">SKU:</label>   
-            <input type="text" id="sku" class="invent_input_sku" placeholder="NAR001012"/>
+            <input type="text" id="sku" class="invent_input_sku" value= "<%=product.sku %>">
             </section>
         <section class="invent_seccion">
             <label for="precio" class="invent_label_precio">Precio:</label> 
-            <input type="text" id="precio" class="invent_input_precio" placeholder="$ 1.799,00"/>
+            <input type="text" id="precio" class="invent_input_precio" value="<%= product.price %>">
         </section>
         
     
         <section class="invent_seccion">
             <label for="stock" class="invent_label_stock" >Stock:</label> 
-            <input type="text" id="stock" class="invent_input_stock"  placeholder="10"/>
+            <input type="text" id="stock" class="invent_input_stock" value="<%= product.stock %>">
         
         </section>
     </div>
@@ -68,15 +67,15 @@ Shipudden invocando chidori</textarea>
         <section class="desc_sect">
         
             <label for="descuento" class="invent_label_desc" >Descuento:</label> 
-            <input type="text" id="descuento" class="invent_input" placeholder="10%"/>
+            <input type="text" id="descuento" class="invent_input" value="<%= product.discount %>">
         </section>
 
         <section class="desc_sect_cuotas">
             <label for="cuotas" class="invent_label_cuotas">Cuotas:</label>
         
         <select name="cuotas" class="invent_cuotas" id="cuotas">
-            <option value="numero-cuotas" class="invent_cuotas_opc1">6 Cuotas sin interés</option>
-            <option value="numero-cuotas" class="invent_cuotas_opc2">12 Cuotas sin interés</option>
+            <option value="" class="invent_cuotas_opc1"><%= product.dues %> Cuotas sin interés</option>
+            
         </select>
         </section>
         </div>
@@ -86,25 +85,24 @@ Shipudden invocando chidori</textarea>
            
         </div>
 
-        <section class="figuras">
-        <div class="figura_front">
-            <img class="figura_front_front" src="/img/naruto/kakashi_hatake_front.webp" alt="Figura coleccionable funko - Kakashi">
-                 <p> Frente</p>
-                 
+        <div class="form__box--flex">
+            <div class="edit__img">
+                <img src="/img/<%= product.image_front %>" alt="">
+                <p class="edit__img-side">Frente</p>
+            </div>
+            <div class="edit__img">
+                <img src="/img/<%= product.image_back %>" alt="">
+                <p class="edit__img-side">Dorso</p>
+            </div>
         </div>
-                
-        <div class="figura_back">
-            <img class= "figura_back_back" src="/img/naruto/kakashi_hatake_back.webp" alt="Figura coleccionable funko - Kakashi Box">
-                <p>Dorso</p>
-        </div>
-        </section>
+        
         <div class="boton">
             <input class="boton_send" type="button" value="Modificar Producto">
         </div>
      </main>
      <footer class="footer">
     
-     <%- include("../partials/footerAdmin") -%>
+     <%- include("../partials/footerAdmin") %>
 
     </footer>
      

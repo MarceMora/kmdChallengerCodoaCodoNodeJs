@@ -1,5 +1,5 @@
 const path = require("path");
-const {getAll} = require("../models/productosModel");
+const {getAll,getOne} = require("../models/productosModel");
 
 
 const adminControllers = {
@@ -19,9 +19,15 @@ const adminControllers = {
     },
     createCarry: (req, res)=> res.send ("Ruta para la vista Cargar Producto"),
 
-    editItem: (req, res)=> {
+    editItem: async (req, res)=> {
+
+        const { id }  = req.params;
+
+        const [product] = await getOne( id )
+
         res.render (path.resolve(__dirname,"../views/admin/edit.ejs"),{
             title: "FUNKOSHOP - EDIT",
+            product   
         });
     },
 

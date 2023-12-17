@@ -457,28 +457,26 @@ header{
     color:white;
     cursor:pointer;
   }
-.figuras{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    gap: 60px;
-    margin-bottom: 40px;
-    margin-top: 50px;
-}
-.figura_front{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 5px;
-   
 
-}
-.figura_back{
-    display:flex;
-    flex-direction: column;
+  .form__box--flex {
+    display: flex;
+    gap: var(--spacing-12);
     align-items: center;
-   padding-bottom: 5px;
 }
+
+.edit__img {
+    max-width: 150px;
+    padding-bottom: var(--spacing-8);
+}
+
+.edit__img-side {
+    font-size: var(--font-small);
+    text-align: center;
+    padding-top: var(--spacing-8);
+    border-top: 2px solid var(--primary-solid);
+    font-weight: 600;
+}
+
 .figura_front_front{
     border-bottom: 3px solid var(--primary-solid);
 

@@ -184,7 +184,7 @@ header{
     font-family: var(--base-font);
     font-size: var(--font-large);
     font-weight: 400;
-    size: 24px;
+    size: 20px;
     line-height: 29.05px;
 }
 
@@ -306,7 +306,7 @@ iconify-icon{
 
 .card-item__licence{
     font-family: var(--base-font);
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500px;
     line-height: 16.94px;
 }
@@ -314,7 +314,7 @@ iconify-icon{
 h4.card-item__name{
     font-weight: 700;
     font-family: var(--base-font);
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 21.78px;
     letter-spacing: 0em;

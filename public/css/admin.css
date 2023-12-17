@@ -282,7 +282,7 @@ td.board__category{
 .gral{
     font-family: var(--base-font);
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 60.85px;
     letter-spacing: 4%;  
     color: rgba(31, 31, 31, 1);
