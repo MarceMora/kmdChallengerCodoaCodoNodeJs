@@ -17,7 +17,7 @@ const adminControllers = {
             title: "FUNKOSHOP - CREATE",
         });
     },
-    createItem: (req, res)=> res.send ("Ruta para la vista Cargar Producto"),
+    createItem: (req, res)=> res.send ("Ruta para la vista de agregar un nuevo Item"),
 
     editItemView: async (req, res)=> {
 
@@ -31,8 +31,8 @@ const adminControllers = {
         });
     },
 
-    editItem: (req, res)=> res.send ("Ruta para la Vista encontrar, editar y modificar producto por su Id"),
-    deleteItem: (req, res)=> res.send ("Ruta para la Vista encontrar producto por su Id y borrarlo o eliminarlo")
+    editItem: (req, res)=> res.send ("Ruta para la Vista de Editar y Modificar Item"),
+    deleteItem: (req, res)=> res.send ("Ruta para la Vista de Borra Item")
 
 }
 module.exports = adminControllers;

@@ -16,28 +16,28 @@
         <div class="title">
                 <h1>EDITAR ITEM</h1>
         </div>
-        <form class="edit__form" action="/admin/edit" method = "POST" enctype ="application/x-www-form-urlencoded">
 
-        <section class="categoria">
+        <form class="edit__form" action="/admin/edit" method="POST" enctype="multipart/form-data">
+        <section class= "categoria">
             <div class="subcat_cat">
                 <label for="categoria" class="label-1"><p>Categoría:</p></label>
-            <select class="categoria_list" name="categoria" id="categoria" >
+            <select name="categoria" class="categoria_list">
                 <% if (product.category_id == 1) { %>
-                <option value= "1" class="categoria_option" selected>Funkos</option>
+                <option value= "1" class="categoria_option" select>Funkos</option>
                 <option value= "2" class="categoria_option">Remeras</option>
                 <option value= "3" class="categoria_option">Llaveros</option>
                 <% } %>
 
-                <% if (product.category_id == 2) { %> 
-                <option value= "1" class="categoria_option">Funkos</option>
-                <option value= "2" class="categoria_option" selected>Remeras</option>
-                <option value= "3" class="categoria_option">Llaveros</option>
+                <% if (product.category_id == 2) { %>
+                    <option value= "1" class="categoria_option">Funkos</option>
+                    <option value= "2" class="categoria_option" select>Remeras</option>
+                    <option value= "3" class="categoria_option">Llaveros</option>
                 <% } %>
 
                 <% if (product.category_id == 3) { %>
-                <option value= "1" class="categoria_option" >Funkos</option>
-                <option value= "2" class="categoria_option">Remeras</option>
-                <option value= "3" class="categoria_option" selected>Llaveros</option>
+                        <option value= "1" class="categoria_option">Funkos</option>
+                        <option value= "2" class="categoria_option">Remeras</option>
+                        <option value= "3" class="categoria_option" select>Llaveros</option>
                 <% } %>
 
             </select>
@@ -46,21 +46,21 @@
                 <label for="licencia" class="label-2"><p>Licencia:</p></label>
             <select name="licencia" class="licencia_list">
                 <% if (product.licence_id == 1) { %>
-                <option value= "1" class="licencia_option" selected>Pokemon</option>
+                <option value= "1" class="licencia_option" select>Pokemon</option>
                 <option value= "2" class="licencia_option">Star Wars</option>
                 <option value= "3" class="licencia_option">Harry Potter</option>
                 <% } %>
 
                 <% if (product.licence_id == 2) { %>
-                <option value= "1" class="licencia_option">Pokemon</option>
-                <option value= "2" class="licencia_option" selected>Star Wars</option>
-                <option value= "3" class="licencia_option">Harry Potter</option>
+                    <option value= "1" class="licencia_option">Pokemon</option>
+                    <option value= "2" class="licencia_option" select>Star Wars</option>
+                    <option value= "3" class="licencia_option">Harry Potter</option>
                 <% } %>
 
                 <% if (product.licence_id == 3) { %>
-                <option value= "1" class="licencia_option">Pokemon</option>
-                <option value= "2" class="licencia_option">Star Wars</option>
-                <option value= "3" class="licencia_option" selected>Harry Potter</option>
+                    <option value= "1" class="licencia_option">Pokemon</option>
+                    <option value= "2" class="licencia_option">Star Wars</option>
+                    <option value= "3" class="licencia_option" select>Harry Potter</option>
                 <% } %>
 
             </select>
@@ -131,10 +131,9 @@
         <div class="boton">
             <input class="boton_send" type="button" value="Modificar Producto">
         </div>
-        </form>
-
-    </main>
-    <footer class="footer">
+    </form>
+     </main>
+     <footer class="footer">
     
      <%- include("../partials/footerAdmin") %>
 

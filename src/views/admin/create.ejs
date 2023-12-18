@@ -14,7 +14,7 @@
 
     <main class="container" > <!--Main-->
         <h1 class="title__create">CREAR NUEVO ITEM</h1>
-        <form action="post">
+        <form class="create__form" action= "/admin/create" method= "POST" enctype="multipart/form-data">
             <div class="select__form">
                 <div class="category__licence">
                     <label class="selection" for="category">Categoría:</label>
@@ -89,12 +89,14 @@
                 </div>
 
                 <label class="file_img" for="name">Imágenes:</label>
-                <input class="file__select" type="file"  name="">
+                <input class="file__select" type="file"  name="images" id="image" multiple>
 
                 <div class="button__create">
                     <button class="collection-cart-1" type="submint">Agregar Producto</button>
-                    <button class="collection-cart-2" type="submint">Limpiar</button>
+                    <button class="collection-cart-2" type="submint">Limpiar</button>   
                 </div>
+                
+        
 
             </div>
         </form>
