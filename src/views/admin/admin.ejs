@@ -49,11 +49,12 @@
                 
                 <td><a href="/admin/edit/<%= item.product_id %>">
                     <img class="size-img" src="/img/icons/edit_pencil.svg"></a></td>
-                
-                <td><a href="/admin/delete/<%= item.product_id %>">
-                    <img class="size-img" src="/img/icons/delete_trash.svg"></a></td>
-                    
+
+                <form action="admin/delete<%= product.product_id %> ?_method = DELETE " method="POST" enctype="application/x-www-form-urlencoded">
+                    <img class="size-img" src="/img/icons/delete_trash.svg"> 
+                </form>
             </tr>
+
             <% }); %>
             
         </table>

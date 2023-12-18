@@ -17,7 +17,14 @@ const adminControllers = {
             title: "FUNKOSHOP - CREATE",
         });
     },
-    createItem: (req, res)=> res.send ("Ruta para la vista de agregar un nuevo Item"),
+    createItem: (req, res)=> {
+    console.log(req.body);
+    console.log(req.files);
+    
+    
+    res.send ("Ruta para la vista de agregar un nuevo Item")
+    },
+
 
     editItemView: async (req, res)=> {
 
