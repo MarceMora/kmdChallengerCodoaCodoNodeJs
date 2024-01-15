@@ -22,6 +22,7 @@
             <div class="subcat_cat">
                 <label for="categoria" class="label-1"><p>Categoría:</p></label>
             <select name="categoria" class="categoria_list">
+                <option value="" disabled selected hidden>Seleccionar</option>
                 <% if (product.category_id == 1) { %>
                 <option value= "1" class="categoria_option" select>Funkos</option>
                 <option value= "2" class="categoria_option">Remeras</option>
@@ -45,6 +46,7 @@
             <div class="subcat_cat">
                 <label for="licencia" class="label-2"><p>Licencia:</p></label>
             <select name="licencia" class="licencia_list">
+                <option value="" disabled selected hidden>Seleccionar</option>
                 <% if (product.licence_id == 1) { %>
                 <option value= "1" class="licencia_option" select>Pokemon</option>
                 <option value= "2" class="licencia_option">Star Wars</option>
@@ -127,7 +129,7 @@
                 <p class="edit__img-side">Dorso</p>
             </div>
         </div>
-        
+      
         <div class="boton">
             <input class="boton_send" type="button" value="Modificar Producto">
         </div>

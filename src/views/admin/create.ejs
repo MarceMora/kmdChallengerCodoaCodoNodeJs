@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
-    <link rel="stylesheet" href="../../css/create.css">
+    <link rel="stylesheet" href="/css/create.css">
 </head>
 <body>
     <header>    
@@ -14,13 +14,13 @@
 
     <main class="container" > <!--Main-->
         <h1 class="title__create">CREAR NUEVO ITEM</h1>
-        <form class="create__form" action= "/admin/create" method= "POST" enctype="multipart/form-data">
+        <form class="create__form" action= "/admin/create" method= "POST" enctype="multipart/form-data" >
             <div class="select__form">
                 <div class="category__licence">
                     <label class="selection" for="category">Categoría:</label>
                     <div class="chevron__down ">
-                        <select class="select__option" name="category" id="category">
-                            <option value="">Seleccionar </option>
+                        <select class="select__option" name="category" id="category" require>
+                            <option value="" disabled selected hidden>Seleccionar</option>
                             <option value="1">Funkos</option>
                             <option value="2">Remeras</option>
                             <option value="3">Llaveros</option>
@@ -30,10 +30,10 @@
 
 
 
-                    <label class="selection l" for="license">Licencia:</label>
+                    <label class="selection l" for="licence">Licencia:</label>
                     <div class="chevron__down">
-                        <select class="select__option" name="license" id="">
-                            <option value="">Seleccionar</option>
+                        <select class="select__option" name="licence" id="licence" require>
+                            <option value="" disabled selected hidden>Seleccionar</option>
                             <option value="1">Pokemon</option>
                             <option value="2">Star Wars</option>
                             <option value="3">Harry Potter</option>
@@ -41,48 +41,42 @@
                     </div>
                     <i class="chevron__licence"></i>
                 </div>
-                
-
-
                 <div class="name-product">
                     <label class="name-product-title" for="name">Nombre del producto:</label>
-                    <input class="product-example" type="text" name="" id=""
-                        placeholder="Kakashi Hatake Shippuden Saga ">
+                    <input class="product-example" type="text" name="name" id=""
+                        placeholder="Kakashi Hatake Shippuden Saga " require>
                 </div>
-
-
-
-                <textarea class="text__area" placeholder="  Descripción del producto" name="" id="" cols="10"
-                    rows="10"></textarea>
+                <textarea class="text__area" placeholder="  Descripción del producto" name="description" id="" cols="10" rows="10" require></textarea>
 
 
                 <div class="">
-                    <label class="characteristics" for="name">SKU:</label>
-                    <input class="characteristics__sku" type="text" name="" id="" placeholder="SSK111AB001">
+                    <label class="characteristics" for="name">Sku:</label>
+                    <input class="characteristics__sku" type="text" name= "sku" id="" placeholder="SSKU001002" require>
 
 
 
-                    <label class="characteristics " for="name">Precio:</label>
-                    <input class="characteristics__price" type="text" name="" id="" placeholder="$ 0.000,00">
+                    <label class="characteristics " for="name">Price:</label>
+                    <input class="characteristics__price" type="text" name= "price" id="" placeholder="$ 0.000,00" require>
 
 
 
                     <label class="characteristics " for="name">Stock:</label>
-                    <input class="characteristics__stock" type="text" name="" id="" placeholder="0">
+                    <input class="characteristics__stock" type="text" name="stock" id="" placeholder="0" require>
                 </div>
 
                 <div class="dues">
                     <label class="dues__discount" for="name">Descuento:</label>
-                    <input class="dues--discount" type="text" name="" id="" placeholder="0%">
+                    <input class="dues--discount" type="text" name="discount" id="" placeholder="0 %" require>
 
 
                     <label class="selection__dues" for="name">Cuotas:</label>
                     <div class="chevron__down">
                         <select class="select__option-dues" name="dues" id="">
-                            <option value=""> 3 cuotas sin interés </option>
-                            <option value=""></option>
-                            <option value=""></option>
-                            <option value=" "></option>
+                            <option value="" disabled selected hidden>Seleccionar</option>
+                            <option value="3"> 3 cuotas sin interés </option>
+                            <option value="6"> 6 cuotas sin interes</option>
+                            <option value="9"> 9 cuotas sin interes</option>
+                            <option value="12"> 12 cuotas sin interes</option>
                         </select>
                     </div>
                     <i class="chevron"></i>

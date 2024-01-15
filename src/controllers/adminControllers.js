@@ -1,5 +1,5 @@
 const path = require("path");
-const {getAll,getOne} = require("../models/productosModel");
+const {getAll, getOne, create, deleteOne} = require("../models/productosModel");
 
 
 const adminControllers = {
@@ -17,12 +17,35 @@ const adminControllers = {
             title: "FUNKOSHOP - CREATE",
         });
     },
-    createItem: (req, res)=> {
-    console.log(req.body);
-    console.log(req.files);
+
+    createItem: async (req, res)=> {
+          /* console.table(req.body) */
+
+        const product_schema = {
+        product_name: req.body.name,
+        product_description: req.body.description,
+        price: parseInt(req.body.price), 
+        stock:(req.body.stock), 
+        discount:(req.body.discount),
+        sku: req.body.sku,  
+        dues:(req.body.dues),
+        image_front: "/product/" + req.files[0].filename,
+        image_back: "/product/" + req.files[1].filename,
+        licence_id:(req.body.licence),
+        category_id:(req.body.category),
+        
+    }
+        /* const result = */ await create([Object.values(product_schema)]);
+        /*console.log(result);*/
     
-    
-    res.send ("Ruta para la vista de agregar un nuevo Item")
+        
+       /*
+        console.log([Object.values(product_schema)]);
+        ;*/
+         
+
+        res.redirect("/admin");
+
     },
 
 
@@ -30,7 +53,7 @@ const adminControllers = {
 
         const  {id} = req.params;
 
-        const [product] = await getOne(id)
+        const [product] = await getOne(id);
 
         res.render (path.resolve(__dirname,"../views/admin/edit.ejs"),{
             title: "FUNKOSHOP - EDIT",
@@ -39,7 +62,14 @@ const adminControllers = {
     },
 
     editItem: (req, res)=> res.send ("Ruta para la Vista de Editar y Modificar Item"),
-    deleteItem: (req, res)=> res.send ("Ruta para la Vista de Borra Item")
+
+    deleteItem: async (req, res)=> {
+        const { id } = req.params;
+       /* res.send ("Quieres Borrar el  Item: " + id); */ /*para probar la ruta */
+       await deleteOne ({product_id: id });
+       res.redirect("/admin");
 
 }
+};
+
 module.exports = adminControllers;
