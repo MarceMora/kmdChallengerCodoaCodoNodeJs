@@ -37,8 +37,48 @@ const getOne = async (id) => {
 }
 }
 
+const create = async(params)=>{
+
+    try{
+        const [product] = await conn.query("INSERT INTO product(product_name, product_description, price, stock, discount, sku, dues, image_front, image_back, licence_id, category_id) VALUES ?;", [params]);
+
+        return product;
+    } catch(error) {
+        return {
+            error: true,
+            message: "Se ha encontrado un error en la base de datos: " + error
+
+        }
+    }  finally {
+        conn.releaseConnection();
+    
+}
+
+}
+
+const deleteOne = async(params)=>{
+
+    try{
+        const [product] = await conn.query("DELETE FROM product WHERE ?", params);
+
+        return product;
+    } catch(error) {
+        return {
+            error: true,
+            message: "Se ha encontrado un error en la base de datos: " + error
+
+        }
+    }  finally {
+        conn.releaseConnection();
+    
+}
+
+}
+
 module.exports = {
     getAll,
-    getOne
+    getOne,
+    create,
+    deleteOne
 }
 

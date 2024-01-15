@@ -1,11 +1,12 @@
 const mysql = require("mysql2");
+require("dotenv").config();
 
 const conn = mysql.createPool({
-    user: "root",
-    password: "",
-    host: "localhost",
-    port: 3306,
-    database: "funko",
+    user: process.env.DBUSER,
+    password: process.env.DBPASS,
+    host: process.env.DBHOST,
+    port: process.env.DBPORT,
+    database: process.env.DBSCHEMA,
     connectionLimit: 10,
     waitForConnections: true,
     queueLimit: 0
